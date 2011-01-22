@@ -1,0 +1,7847 @@
+(saveFormat "7.0")
+(date "Mon 06/Apr/2009 09:57:50 ")
+(veerev "7.51.7801.0")
+(platform "PC")
+(execMode v6)
+(filterNAN 0)
+(workspaceStackingOrder F17 M.109 F23 M M.215 F21 F22)
+(sysconfig
+(iodevice "Com1"
+(type Serial)
+(gateway "This host")
+(channel 1)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 1)
+(byteOrder 0)
+(model "")
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 12000))
+(iodevice "serial11"
+(type Serial)
+(gateway "This host")
+(channel 11)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(model "")
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "Serial10"
+(type Serial)
+(gateway "This host")
+(channel 10)
+(readTerm "\r")
+(fs ",")
+(eol "\r")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(model "")
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "Serial3"
+(type Serial)
+(gateway "This host")
+(channel 0)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(isLive 0)
+(model "")
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096))
+(iodevice "Serial12"
+(type Serial)
+(gateway "This host")
+(channel 12)
+(readTerm "\n")
+(fs ",")
+(eol "\n")
+(multiField dataOnly)
+(arrayFormat linear)
+(timeout 5)
+(byteOrder 0)
+(model "")
+(baudRate 9600)
+(charSize 8)
+(stopBits 1)
+(parity off)
+(handshake off)
+(recvBufferSize 4096)))
+(SaveCF yes)
+(Colors
+(Property "Detail View" "Lightest Gray" bwGrayScale 10)
+(Property "Workspace" "Dark Gray")
+(Property "Line Color" "Black" bwGrayScale 100)
+(Property "Line Color (numeric)" "Dark Sky Blue" bwGrayScale 100)
+(Property "Line Color (complex)" "Dark Sky Blue" bwGrayScale 100)
+(Property "Line Color (string)" "Med Orange" bwGrayScale 100)
+(Property "Line Color (sequence out)" "Med Dark Gray" bwGrayScale 100)
+(Property "Line Color (highlight)" "Magenta" bwGrayScale 100)
+(Property "Print ID Number BG Color" "Lightest Gray" bwGrayScale 10)
+(Property "Tool Tip" "Pale Yellow" bwGrayScale 0)
+(Property "Tool Tip Text" "Black" bwGrayScale 100)
+(Property "Object Title" "Blue Gray" bwGrayScale 30)
+(Property "Object Title Text" "Black" bwGrayScale 100)
+(Property "Object" "Light Blue Gray")
+(Property "Object Text" "Black")
+(Property "Object Step Highlight" "Yellow")
+(Property "Object Execute Highlight" "Light Green")
+(Property "Object Trail Highlight" "Med Green")
+(Property "Object Error Highlight" "Med Red")
+(Property "Object Breakpoint Highlight" "Orange")
+(Property "Object Discovery Highlight" "Blue")
+(Property "Dialog Box Title Bar" "Dark Blue" bwGrayScale 50)
+(Property "Dialog Box Title Bar Text" "White" bwGrayScale 0)
+(Property "Dialog Box" "Gray")
+(Property "Dialog Box Text" "Black")
+(Property "Graph Background" "Black" bwGrayScale 0)
+(Property "Edit Field" "White")
+(Property "Edit Field Text" "Black")
+(Property "Highlighted Edit Field" "Dark Blue")
+(Property "Highlighted Edit Field Text" "White")
+(Property "Menu" "Gray")
+(Property "Menu Text" "Black")
+(Property "Disabled Menu Text" "Dark Gray")
+(Property "Highlighted Menu" "Dark Blue")
+(Property "Highlighted Menu Text" "White"))
+(Fonts
+(Property "Menu Text" "Arial" 14)
+(Property "Object Title Text" "Arial" 12)
+(Property "Object Text" "Arial" 12)
+(Property "Terminal Text" "Arial" 12)
+(Property "Logging AlphaNumeric Text" "Courier New" 12)
+(Property "AlphaNumeric Scalar Text" "Arial" 14)
+(Property "AlphaNumeric Array Text" "Arial" 12)
+(Property "Bus Monitor Text" "Courier New" 12)
+(Property "Dialog Box Title Bar Text" "Arial" 14)
+(Property "Dialog Box Text" "Arial" 12)
+(Property "Printout Page Header Text" "Arial" 14)
+(Property "Printout Object Title Text" "Arial" 14)
+(Property "Printout Object Description Text" "Courier New" 14)
+(Property "Printout Object ID Number Text" "Arial" 12)
+(Property "ToPrinter Printout Text" "Courier New" 14)
+(Property "Tool Tip Text" "Arial" 12)
+(Property "Graph Scale Label Text" "Arial" 10 bold))
+(device 0 ROOTCONTEXT
+(properties
+(trigMode deg)
+(nextID 223)
+(popupTitleText "Total CO2 Analysis")
+(popupMoveable 1)
+(deleteGlobals 0))
+(deviceList
+(UserFunctions
+(nextID 25)
+(context 19
+(properties
+(name "AcidFlush")
+(trigMode deg)
+(nextID 20)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 7 START25)
+(device 18 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 8 "WRITE BYTE 254" "WRITE BYTE 9" "WAIT INTERVAL:.5"
+"EXECUTE RESET" "WRITE BYTE 254" "WRITE BYTE 1" "WAIT INTERVAL:.5"
+"EXECUTE RESET"))
+(implementation
+(iopath "Serial12")))
+(device 19 FORCOUNT
+(properties
+(count 10))
+(interface
+(output 1
+(name "Count")
+(lock name constraints))))
+(configuration
+(connect D2:1 D1:0)
+(connect D0:0 D2:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 917 673)
+(anchorPt -115 5)
+(configuration
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 530 250))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 224 236))
+(terminals on)
+(pinCenter 670 440))
+(devCarrierFor 19
+(active open)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open
+(extent 95 31))
+(pinCenter 530 330))
+(connect D2:1 D1:0
+(points 3 580 330 670 330 670 412))
+(connect D0:0 D2:0
+(points 4 530 263 530 282 530 282 530 294)))
+(stackingOrder 0 1 2))))
+(context 24
+(properties
+(name "Close_Dump")
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 2 "WRITE BYTE 254" "WRITE BYTE 0"))
+(implementation
+(iopath "Serial12")))
+(device 1 START25)
+(configuration
+(connect D1:0 D0:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 855 673)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 520 380))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 520 210))
+(connect D1:0 D0:0
+(points 2 520 223 520 322)))
+(stackingOrder 0 1))))
+(context 18
+(properties
+(name "ErrorRecord")
+(trigMode deg)
+(nextID 8)
+(popupMoveable 1))
+(interface
+(input 1
+(name "A")
+(optional yes)))
+(deviceList
+(device 0 TOGLOBAL
+(properties
+(name "ErrorLog")
+(globalName "ErrorLog"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 1 TOSTRING
+(properties
+(transactions 5 "WRITE TEXT a DATE:DMY TIME:HMS:H24" "WRITE TEXT \" , \" STR"
+"WRITE TEXT b" "WRITE TEXT \" , \" STR" "WRITE TEXT c EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(output 1
+(name "result")
+(lock name constraints)))
+(implementation
+(attr iopath string write "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 3 FORMULA
+(properties
+(name "now()")
+(expr 1 "now()"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 5 FROMGLOBAL
+(properties
+(name "SequenceTime")
+(globalName "SequenceTime"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 6 TOGLOBAL
+(properties
+(name "TCO2Error")
+(globalName "TCO2Error"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 7 SCROLLINGTEXTDISPLAY
+(properties
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D1:1 D0:1)
+(connect I1:1 D1:0)
+(connect D2:1 D1:1)
+(connect D3:1 D1:2)
+(connect I1:1 D1:3)
+(connect I1:1 D2:0)
+(connect D2:0 D3:0)
+(connect D1:0 D4:0)
+(connect D3:1 D4:1)
+(connect D1:1 D5:1)))
+(contextCarrier
+(active detail)
+(panel
+(extent 320 232)
+(drawGrid "off")
+(widget 5 detail
+(relativeOrigin 0 0)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 0)
+(title on)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 315 207)
+(noformatter))
+(panelBg "Light Blue Gray"))
+(detail
+(extent 795 661)
+(anchorPt 209 37)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 80 51))
+(terminals on)
+(pinCenter 370 420))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 53 34))
+(open
+(extent 225 117))
+(terminals on)
+(pinCenter 270 480))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 140 430))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 92 15))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 140 470))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 64 15))
+(open
+(extent 91 51))
+(terminals on)
+(pinCenter 270 530))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 138 15))
+(open
+(extent 315 207)
+(noformatter))
+(pinCenter 530 580))
+(connect D1:1 D0:1
+(points 4 299 480 320 480 320 420 341 420))
+(connect I1:1 D1:0
+(points 5 -209 293 20 293 20 400 270 400 270 460))
+(connect D2:1 D1:1
+(points 4 160 430 220 430 220 470 241 470))
+(connect D3:1 D1:2
+(points 4 188 470 210 470 210 480 241 480))
+(connect I1:1 D1:3
+(points 6 -209 293 30 293 30 500 210 500 210 490 241 490))
+(connect I1:1 D2:0
+(points 5 -209 293 20 293 20 400 140 400 140 420))
+(connect D2:0 D3:0
+(points 2 140 440 140 460))
+(connect D1:0 D4:0
+(points 2 270 499 270 520))
+(connect D3:1 D4:1
+(points 6 188 470 210 470 210 480 220 480 220 530 235 530))
+(connect D1:1 D5:1
+(points 4 299 480 330 480 330 580 458 580)))
+(stackingOrder 2 3 1 4 0 5))))
+(context 22
+(properties
+(name "Full_Flow")
+(trigMode deg)
+(nextID 5)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 4 "WRITE BYTE 254" "WRITE BYTE 3" "WRITE BYTE 254" "WRITE BYTE 10"
+))
+(implementation
+(iopath "Serial12")))
+(device 2 START25)
+(device 3 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Turn off relay #4\\par\r\nTurn on relay #3\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:0 D0:0)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 855 673)
+(wndState max)
+(active detail)
+(detail
+(extent 1551 1051)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 520 350))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 520 190))
+(devCarrierFor 3
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 184 66)
+(editing enabled))
+(pinCenter 770 350))
+(connect D1:0 D0:0
+(points 2 520 203 520 292)))
+(stackingOrder 1 0 2))))
+(context 14
+(properties
+(name "Get_LicorData")
+(trigMode deg)
+(nextID 118)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 8 TOGLOBAL
+(properties
+(name "LicorData")
+(globalName "LicorData"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 11 FROMGLOBAL
+(properties
+(name "LicorData")
+(globalName "LicorData"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 15 FROMARRAY
+(properties
+(expr 1 "Ary[1]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 18 FROMARRAY
+(properties
+(expr 1 "Ary[2]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 20 TOGLOBAL
+(properties
+(name "pCO2")
+(globalName "pCO2"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 21 TOGLOBAL
+(properties
+(name "pCO2_integrate")
+(globalName "pCO2_integrate"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 22 FROMARRAY
+(properties
+(expr 1 "Ary[6]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 23 TOGLOBAL
+(properties
+(name "pCO2_max")
+(globalName "pCO2_max"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 24 FROMARRAY
+(properties
+(expr 1 "Ary[5]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 25 TOGLOBAL
+(properties
+(name "CO2Pres")
+(globalName "CO2Pres"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 26 FROMARRAY
+(properties
+(expr 1 "Ary[3]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 27 TOGLOBAL
+(properties
+(name "H2O")
+(globalName "H2O"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 31 TOGLOBAL
+(properties
+(name "CO2Temp")
+(globalName "CO2Temp"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 32 FROMARRAY
+(properties
+(expr 1 "Ary[4]"))
+(interface
+(input 1
+(name "Ary")
+(tag "Ary"))
+(output 1
+(name "SubAry")
+(tag "Result"))
+(output 2
+(name "Type")
+(tag "Type"))
+(output 3
+(name "NumDims")
+(tag "NumDims"))
+(output 4
+(name "DimSizes")
+(tag "DimSizes"))
+(output 5
+(name "TotSize")
+(tag "TotSize"))))
+(device 100 LITERALCONSTANT
+(properties
+(name "Request Data"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "(RS232(Poll Now))"))
+(initValue Text
+(data  ""))))
+(device 102 IFTHENELSE
+(properties
+(cases 1 "A==75"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 103 FROMGLOBAL
+(properties
+(name "Get SequenceTime")
+(globalName "SequenceTime"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 104 TOGLOBAL
+(properties
+(name "Set pCO2_start")
+(globalName "pCO2_start"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 105 FROMGLOBAL
+(properties
+(name "Get pCO2")
+(globalName "pCO2"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 106 IFTHENELSE
+(properties
+(cases 1 "A==159"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 108 FROMGLOBAL
+(properties
+(name "Get pCO2")
+(globalName "pCO2"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 109 TOGLOBAL
+(properties
+(name "Set pCO2_end")
+(globalName "pCO2_end"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 111 IFTHENELSE
+(properties
+(cases 1 "75<A AND A<159"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 112 FROMGLOBAL
+(properties
+(name "Get pCO2")
+(globalName "pCO2"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 113 FROMGLOBAL
+(properties
+(name "Get PeakAvg")
+(globalName "PeakAvg"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 114 FORMULA
+(properties
+(expr 1 "A+B"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 115 TOGLOBAL
+(properties
+(name "Set PeakAvg")
+(globalName "PeakAvg"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 116 TEXTDISPLAY
+(interface
+(input 1
+(name "Data"))))
+(device 117 IODEVICE
+(properties
+(name "serial11 ( @ 11)")
+(transactions 3 "WRITE TEXT a STR EOL" "READ TEXT y STR"
+"READ TEXT x REAL64 ARRAY:7"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(name "Y")
+(optional yes)))
+(implementation
+(iopath "serial11")))
+(configuration
+(connect D28:1 D0:1)
+(connect D0:0 D1:0)
+(connect D1:1 D2:1)
+(connect D1:1 D3:1)
+(connect D2:1 D4:1)
+(connect D10:1 D5:1)
+(connect D1:1 D6:1)
+(connect D13:1 D7:1)
+(connect D1:1 D8:1)
+(connect D8:1 D9:1)
+(connect D1:1 D10:1)
+(connect D3:1 D11:1)
+(connect D6:1 D12:1)
+(connect D1:1 D13:1)
+(connect D16:1 D15:1)
+(connect D1:0 D16:0)
+(connect D18:1 D17:1)
+(connect D15:1 D18:0)
+(connect D16:1 D19:1)
+(connect D19:1 D20:0)
+(connect D20:1 D21:1)
+(connect D16:1 D22:1)
+(connect D22:1 D23:0)
+(connect D23:0 D24:0)
+(connect D23:1 D25:1)
+(connect D24:1 D25:2)
+(connect D25:1 D26:1)
+(connect D25:1 D27:1)
+(connect D14:1 D28:1)))
+(contextCarrier
+(active detail)
+(panel
+(extent 410 300)
+(drawGrid "off")
+(panelBg "Light Blue Gray"))
+(detail
+(extent 928 507)
+(anchorPt -106 79)
+(configuration
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 58 15))
+(open
+(extent 85 51))
+(terminals on)
+(pinCenter 620 0))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 58 15))
+(open
+(extent 85 51))
+(terminals on)
+(pinCenter 620 110))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 68 54)
+(iconImage "unbuild.icn"))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 750 130))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 68 54)
+(iconImage "unbuild.icn"))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 750 190))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 36 15))
+(open
+(extent 64 51))
+(terminals on)
+(pinCenter 840 110))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 119 51))
+(terminals on)
+(pinCenter 860 350))
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 68 54)
+(iconImage "unbuild.icn"))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 750 250))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 68 15))
+(open
+(extent 94 51))
+(terminals on)
+(pinCenter 860 410))
+(devCarrierFor 24
+(active icon)
+(icon
+(extent 68 54)
+(iconImage "unbuild.icn"))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 750 310))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 56 15))
+(open
+(extent 83 51))
+(terminals on)
+(pinCenter 850 290))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 68 54)
+(iconImage "unbuild.icn"))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 750 370))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 29 15))
+(open
+(extent 57 51))
+(terminals on)
+(pinCenter 840 170))
+(devCarrierFor 31
+(active icon)
+(icon
+(extent 62 15))
+(open
+(extent 89 51))
+(terminals on)
+(pinCenter 860 230))
+(devCarrierFor 32
+(active icon)
+(icon
+(extent 68 54)
+(iconImage "unbuild.icn"))
+(open
+(extent 93 110))
+(terminals on)
+(pinCenter 750 430))
+(devCarrierFor 100
+(active icon)
+(icon
+(extent 83 16))
+(open
+(extent 194 30))
+(pinCenter 280 10))
+(devCarrierFor 102
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 61 51))
+(terminals on)
+(pinCenter 590 560))
+(devCarrierFor 103
+(active icon)
+(icon
+(extent 116 15))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 350 560))
+(devCarrierFor 104
+(active icon)
+(icon
+(extent 92 15))
+(open
+(extent 95 51))
+(terminals on)
+(pinCenter 870 580))
+(devCarrierFor 105
+(active icon)
+(icon
+(extent 59 15))
+(open
+(extent 64 51))
+(terminals on)
+(pinCenter 730 580))
+(devCarrierFor 106
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 600 680))
+(devCarrierFor 108
+(active icon)
+(icon
+(extent 59 15))
+(open
+(extent 64 51))
+(terminals on)
+(pinCenter 740 700))
+(devCarrierFor 109
+(active icon)
+(icon
+(extent 89 15))
+(open
+(extent 92 51))
+(terminals on)
+(pinCenter 880 700))
+(devCarrierFor 111
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 124 51))
+(terminals on)
+(pinCenter 600 780))
+(devCarrierFor 112
+(active icon)
+(icon
+(extent 59 15))
+(open
+(extent 64 51))
+(terminals on)
+(pinCenter 730 800))
+(devCarrierFor 113
+(active icon)
+(icon
+(extent 75 15))
+(open
+(extent 79 51))
+(terminals on)
+(pinCenter 730 850))
+(devCarrierFor 114
+(active icon)
+(icon
+(extent 50 25))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 850 820))
+(devCarrierFor 115
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 79 51))
+(terminals on)
+(pinCenter 980 820))
+(devCarrierFor 116
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 990 770))
+(devCarrierFor 117
+(active icon)
+(icon
+(extent 96 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 440 10))
+(connect D28:1 D0:1
+(points 2 490 0 588 0))
+(connect D0:0 D1:0
+(points 2 620 10 620 100))
+(connect D1:1 D2:1
+(points 4 651 110 670 110 670 130 713 130))
+(connect D1:1 D3:1
+(points 6 651 110 670 110 670 130 680 130 680 190 713 190))
+(connect D2:1 D4:1
+(points 2 786 110 819 110))
+(connect D10:1 D5:1
+(points 2 786 350 810 350))
+(connect D1:1 D6:1
+(points 6 651 110 670 110 670 130 680 130 680 250 713 250))
+(connect D13:1 D7:1
+(points 2 786 410 823 410))
+(connect D1:1 D8:1
+(points 6 651 110 670 110 670 130 680 130 680 310 713 310))
+(connect D8:1 D9:1
+(points 2 786 290 819 290))
+(connect D1:1 D10:1
+(points 6 651 110 670 110 670 130 680 130 680 370 713 370))
+(connect D3:1 D11:1
+(points 2 786 170 823 170))
+(connect D6:1 D12:1
+(points 2 786 230 826 230))
+(connect D1:1 D13:1
+(points 6 651 110 670 110 670 130 680 130 680 430 713 430))
+(connect D16:1 D15:1
+(points 2 410 560 552 560))
+(connect D1:0 D16:0
+(points 4 620 120 620 140 350 140 350 550))
+(connect D18:1 D17:1
+(points 2 762 580 821 580))
+(connect D15:1 D18:0
+(points 3 628 550 730 550 730 570))
+(connect D16:1 D19:1
+(points 4 410 560 530 560 530 680 562 680))
+(connect D19:1 D20:0
+(points 3 638 670 740 670 740 690))
+(connect D20:1 D21:1
+(points 2 772 700 833 700))
+(connect D16:1 D22:1
+(points 4 410 560 530 560 530 780 562 780))
+(connect D22:1 D23:0
+(points 3 638 770 730 770 730 790))
+(connect D23:0 D24:0
+(points 2 730 810 730 840))
+(connect D23:1 D25:1
+(points 4 762 800 780 800 780 810 822 810))
+(connect D24:1 D25:2
+(points 4 770 850 790 850 790 830 822 830))
+(connect D25:1 D26:1
+(points 2 877 820 940 820))
+(connect D25:1 D27:1
+(points 4 877 820 900 820 900 770 927 770))
+(connect D14:1 D28:1
+(points 2 324 10 389 10)))
+(stackingOrder 4 5 11 9 12 0 1 16 18 17 20 21 26 7 3 6 8 10 13 27 14 28 2 15 19
+22 23 24 25))))
+(context 21
+(properties
+(name "Normal_Flow")
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 4 "WRITE BYTE 254" "WRITE BYTE 2" "WRITE BYTE 254" "WRITE BYTE 3")
+)
+(implementation
+(iopath "Serial12")))
+(device 2 START25)
+(device 3 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Turn off relay #3\\par\r\nTurn off relay #4\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:0 D0:0)))
+(contextCarrier
+(wndOrigin 22 22)
+(wndState res)
+(active detail)
+(detail
+(extent 855 673)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 470 370))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 470 220))
+(devCarrierFor 3
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 184 66)
+(editing enabled))
+(pinCenter 740 380))
+(connect D1:0 D0:0
+(points 2 470 233 470 312)))
+(stackingOrder 0 1 2))))
+(context 20
+(properties
+(name "Open_Dump")
+(trigMode deg)
+(nextID 2)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 2 "WRITE BYTE 254" "WRITE BYTE 8"))
+(implementation
+(iopath "Serial12")))
+(device 1 START25)
+(configuration
+(connect D1:0 D0:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 855 673)
+(anchorPt 0 0)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 510 430))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 530 270))
+(connect D1:0 D0:0
+(points 4 530 283 530 300 510 300 510 372)))
+(stackingOrder 0 1))))
+(context 15
+(properties
+(name "Plot")
+(trigMode deg)
+(nextID 68)
+(popupTitleText "UserObject")
+(popupMoveable 1)
+(showPopupTitle 0)
+(showPopupBorder 0))
+(deviceList
+(device 2 TEXTDISPLAY
+(properties
+(name "Current xCO2")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 3 SLIDER
+(properties
+(name "Minutes of Data")
+(initializeAtPrerun 1)
+(range 1 350)
+(detents 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  15))
+(initValue Int32
+(data  15))))
+(device 4 TEXTDISPLAY
+(properties
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 5 TEXTDISPLAY
+(properties
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 6 TEXTDISPLAY
+(properties
+(name "Current Time")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 7 FORMULA
+(properties
+(expr 1 "a-b*60"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 8 TEXTDISPLAY
+(properties
+(name "Start Plot Time")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 9 SLIDER
+(properties
+(name "Y Scale MIN")
+(initializeAtPrerun 1)
+(range -500 500)
+(detents 25))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 10 SLIDER
+(properties
+(name "Y Scale Max")
+(initializeAtPrerun 1)
+(range 0 2000)
+(detents 25))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  500))
+(initValue Int32
+(data  500))))
+(device 11 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "X"))
+(initValue Text
+(data  ""))))
+(device 12 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Linear"))
+(initValue Text
+(data  ""))))
+(device 13 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Y"))
+(initValue Text
+(data  ""))))
+(device 14 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Linear"))
+(initValue Text
+(data  ""))))
+(device 15 TORECORD
+(properties
+(outputType scalar))
+(interface
+(input 1
+(name "Scale")
+(optional yes))
+(input 2
+(name "MIN")
+(optional yes))
+(input 3
+(name "MAX")
+(optional yes))
+(input 4
+(name "Mapping")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 16 TORECORD
+(properties
+(outputType scalar))
+(interface
+(input 1
+(name "Scale")
+(optional yes))
+(input 2
+(name "MIN")
+(optional yes))
+(input 3
+(name "MAX")
+(optional yes))
+(input 4
+(name "Mapping")
+(optional yes))
+(output 1
+(name "Record"))))
+(device 17 JUNCTION
+(properties
+(name "JCT"))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 18 XYPLOT
+(properties
+(clearAtActivate 0))
+(interface
+(input 1
+(name "XData")
+(lock constraints))
+(input 2
+(name "YData1")
+(lock constraints))
+(input 3
+(type control)
+(name "Scales")
+(tag "ScalesRecord")
+(requires
+(datatype Record))
+(lock name constraints)
+(optional yes)))
+(implementation
+(tracePin 2)
+(graphMode rectangular)))
+(device 19 LABEL
+(properties
+(name "GMT")
+(labelValue "GMT"))
+(implementation))
+(device 34 FROMGLOBAL
+(properties
+(name "Get Xplot")
+(globalName "Xplot"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 38 FROMGLOBAL
+(properties
+(name "Get YPlot")
+(globalName "Yplot"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 39 TOGLOBAL
+(properties
+(name "Set Yplot")
+(globalName "Yplot"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 40 FROMGLOBAL
+(properties
+(name "Get pCO2")
+(globalName "pCO2"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 41 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Place current data in plotting array\\par\r\nand display. Array holds about 5.5 hours\\par\r\nof data. \\par\r\n}\r\n"
+)))
+(device 43 FORMULA
+(properties
+(name "rotate(x,numElem)")
+(expr 1 "rotate(x, 1)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 45 FORMULA
+(properties
+(name "a[2]=b")
+(expr 1 "a[0] = b"))
+(interface
+(input 1
+(name "a")
+(optional yes))
+(input 2
+(name "b")
+(optional yes))
+(output 1
+(name "a")
+(optional yes))))
+(device 46 TOGLOBAL
+(properties
+(name "Set XPlot")
+(globalName "Xplot"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 47 FORMULA
+(properties
+(name "rotate(x,numElem)")
+(expr 1 "rotate(x, 1)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 48 FORMULA
+(properties
+(name "a[2]=b")
+(expr 1 "a[0] = b"))
+(interface
+(input 1
+(name "a")
+(optional yes))
+(input 2
+(name "b")
+(optional yes))
+(output 1
+(name "a")
+(optional yes))))
+(device 55 FORMULA
+(properties
+(name "now()")
+(expr 1 "now()"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 58 FROMGLOBAL
+(properties
+(name "pCO2_integrate")
+(globalName "pCO2_integrate"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 59 TEXTDISPLAY
+(properties
+(name "Integrated CO2")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 60 FROMGLOBAL
+(properties
+(name "pCO2_max")
+(globalName "pCO2_max"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 61 TEXTDISPLAY
+(properties
+(name "Maximum CO2")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 62 FROMGLOBAL
+(properties
+(name "SequenceTime")
+(globalName "SequenceTime"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 63 TEXTDISPLAY
+(properties
+(name "Sample Time")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 64 TEXTDISPLAY
+(properties
+(name "Valve Position")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(device 65 FROMGLOBAL
+(properties
+(name "Get Valve_Position")
+(globalName "Valve_Position"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 66 FROMGLOBAL
+(properties
+(name "Get CurrentRepeat")
+(globalName "CurrentRepeat"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 67 TEXTDISPLAY
+(properties
+(name "Replicate")
+(clearAtActivate 0))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D21:1 D0:1)
+(connect D28:0 D1:0)
+(connect D7:1 D2:1)
+(connect D8:1 D3:1)
+(connect D28:1 D4:1)
+(connect D28:1 D5:1)
+(connect D1:1 D5:2)
+(connect D5:1 D6:1)
+(connect D11:1 D13:1)
+(connect D7:1 D13:2)
+(connect D8:1 D13:3)
+(connect D12:1 D13:4)
+(connect D9:1 D14:1)
+(connect D5:1 D14:2)
+(connect D28:1 D14:3)
+(connect D10:1 D14:4)
+(connect D14:1 D15:1)
+(connect D13:1 D15:2)
+(connect D24:1 D16:1)
+(connect D27:1 D16:2)
+(connect D15:1 D16:3)
+(connect D27:1 D20:1)
+(connect D18:1 D23:1)
+(connect D23:1 D24:1)
+(connect D28:1 D24:2)
+(connect D24:1 D25:1)
+(connect D19:1 D26:1)
+(connect D26:1 D27:1)
+(connect D21:1 D27:2)
+(connect D28:0 D29:0)
+(connect D29:1 D30:1)
+(connect D29:0 D31:0)
+(connect D31:1 D32:1)
+(connect D31:0 D33:0)
+(connect D33:1 D34:1)
+(connect D36:1 D35:1)
+(connect D33:0 D36:0)
+(connect D36:0 D37:0)
+(connect D37:1 D38:1)))
+(contextCarrier
+(active panel)
+(panel
+(extent 1047 351)
+(drawGrid "off")
+(widget 3 detail
+(relativeOrigin 0 0)
+(bg "Pale Yellow")
+(fg "Black")
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle convex)
+(extent 36 16)
+(scFont "Arial" 12))
+(widget 7 detail
+(relativeOrigin 640 50)
+(bg "Light Blue Gray")
+(fg "Black")
+(font "Arial" 10)
+(PID 1)
+(title on)
+(titleFont "Arial" 10)
+(tabIndex 3)
+(borderStyle flat)
+(extent 106 28)
+(layout horizontal)
+(fastmode off))
+(widget 8 detail
+(relativeOrigin 640 0)
+(bg "Light Blue Gray")
+(fg "Black")
+(font "Arial" 10)
+(PID 2)
+(title on)
+(titleFont "Arial" 10)
+(tabIndex 2)
+(borderStyle flat)
+(extent 106 28)
+(layout horizontal)
+(fastmode off))
+(widget 1 detail
+(relativeOrigin 640 100)
+(bg "Light Blue Gray")
+(fg "Black")
+(font "Arial" 10)
+(PID 3)
+(title on)
+(titleFont "Arial" 10)
+(tabIndex 4)
+(borderStyle flat)
+(extent 106 28)
+(layout horizontal)
+(fastmode off))
+(widget 0 detail
+(relativeOrigin 640 150)
+(bg "Pale Golden Orange")
+(fg "Black")
+(PID 4)
+(title on)
+(tabStop off)
+(tabIndex 5)
+(borderStyle flat)
+(extent 106 18)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 1)
+(integerBase decimal))
+(scFont "Arial" 16 bold))
+(widget 30 detail
+(relativeOrigin 640 190)
+(bg "Light Orange")
+(fg "Black")
+(PID 5)
+(title on)
+(tabStop off)
+(tabIndex 6)
+(borderStyle flat)
+(extent 106 18)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 0)
+(integerBase decimal))
+(scFont "Arial" 16 bold))
+(widget 16 detail
+(relativeOrigin 40 0)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 6)
+(title off)
+(tabStop off)
+(tabIndex 1)
+(borderStyle concave)
+(extent 596 307)
+(displayMode 0)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 10000)
+(Xspacing 10000)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 500 4 linear))
+(domain 63367666333.492 63367667233.492 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0)))
+(widget 6 detail
+(relativeOrigin 10 310)
+(bg "Pale Golden Orange")
+(fg "Black")
+(PID 7)
+(title off)
+(tabStop off)
+(tabIndex 10)
+(borderStyle convex)
+(extent 56 15)
+(formatter
+(realFormat timeStamp)
+(realSigDigits 4)
+(realRadixSpec 4)
+(timeStamp time)
+(timeFormat HMS H24)
+(dateFormat WDMY)
+(integerBase decimal))
+(scFont "Arial" 12))
+(widget 2 detail
+(relativeOrigin 0 290)
+(bg "Pale Yellow")
+(fg "Black")
+(PID 8)
+(title off)
+(tabStop off)
+(tabIndex 8)
+(borderStyle convex)
+(extent 36 16)
+(scFont "Arial" 12))
+(widget 4 detail
+(relativeOrigin 310 310)
+(bg "Pale Golden Orange")
+(fg "Black")
+(PID 9)
+(title off)
+(tabStop off)
+(tabIndex 12)
+(borderStyle convex)
+(extent 96 16)
+(formatter
+(realFormat timeStamp)
+(realSigDigits 4)
+(realRadixSpec 4)
+(timeStamp date)
+(timeFormat HMS H24)
+(dateFormat DMY)
+(integerBase decimal))
+(scFont "Arial" 12))
+(widget 17 detail
+(relativeOrigin 270 310)
+(bg "Pale Golden Orange")
+(fg "Black")
+(font "Arial" 12)
+(PID 10)
+(title off)
+(tabStop off)
+(tabIndex 11)
+(borderStyle convex)
+(extent 37 17)
+(just l))
+(widget 34 detail
+(relativeOrigin 640 270)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 11)
+(title on)
+(tabStop off)
+(tabIndex 9)
+(borderStyle flat)
+(extent 106 18)
+(scFont "Arial" 16 bold))
+(widget 32 detail
+(relativeOrigin 640 230)
+(bg "Golden Orange")
+(fg "Black")
+(PID 12)
+(title on)
+(tabStop off)
+(tabIndex 7)
+(borderStyle flat)
+(extent 106 18)
+(formatter
+(realFormat fixed)
+(realSigDigits 4)
+(realRadixSpec 2)
+(integerBase decimal))
+(scFont "Arial" 16 bold))
+(widget 4 detail
+(relativeOrigin 610 310)
+(bg "Pale Golden Orange")
+(fg "Black")
+(PID 13)
+(title off)
+(tabStop off)
+(tabIndex 13)
+(borderStyle convex)
+(extent 56 15)
+(formatter
+(realFormat timeStamp)
+(realSigDigits 4)
+(realRadixSpec 4)
+(timeStamp time)
+(timeFormat HMS H24)
+(dateFormat WDMY)
+(integerBase decimal))
+(scFont "Arial" 12))
+(widget 35 detail
+(relativeOrigin 750 230)
+(PID 14)
+(title on)
+(tabStop off)
+(tabIndex 14)
+(borderStyle flat)
+(extent 106 18)
+(scFont "Arial" 16 bold))
+(widget 38 detail
+(relativeOrigin 750 270)
+(PID 15)
+(title on)
+(tabStop off)
+(tabIndex 15)
+(borderStyle flat)
+(extent 106 18)
+(scFont "Arial" 14 bold))
+(panelBg "Light Blue Gray"))
+(detail
+(extent 1023 889)
+(anchorPt 179 -179)
+(configuration
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 81 16))
+(open
+(extent 131 28))
+(pinCenter 350 110))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 108 16))
+(open
+(extent 217 222)
+(layout vertical)
+(fastmode off)
+(extratics))
+(pinCenter 160 190))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 95 16))
+(open
+(extent 131 28))
+(pinCenter 190 310))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 95 16))
+(open
+(extent 131 28))
+(pinCenter 200 370))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 91 16))
+(open
+(extent 274 38)
+(formatter
+(realFormat timeStamp)
+(realSigDigits 4)
+(realRadixSpec 4)
+(timeStamp dateTime)
+(timeFormat HMS H24)
+(dateFormat WDMY)
+(integerBase decimal)))
+(pinCenter 110 -50))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 57 25))
+(open
+(extent 76 42))
+(terminals on)
+(pinCenter 360 170))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 102 16))
+(open
+(extent 131 28)
+(formatter
+(realFormat timeStamp)
+(realSigDigits 4)
+(realRadixSpec 4)
+(timeStamp time)
+(timeFormat HMS H24)
+(dateFormat WDMY)
+(integerBase decimal)))
+(pinCenter 350 210))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 84 16))
+(open
+(extent 120 216)
+(layout vertical)
+(fastmode off)
+(extratics))
+(pinCenter 330 300))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 84 16))
+(open
+(extent 120 216)
+(layout vertical)
+(fastmode off)
+(extratics))
+(pinCenter 330 320))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 31 16))
+(open
+(extent 194 30))
+(pinCenter 450 150))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 31 16))
+(open
+(extent 194 30))
+(pinCenter 450 200))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 31 16))
+(open
+(extent 194 30))
+(pinCenter 450 290))
+(devCarrierFor 14
+(active icon)
+(icon
+(extent 31 16))
+(open
+(extent 194 30))
+(pinCenter 450 330))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 89 52)
+(iconImage "build.icn"))
+(open
+(extent 117 162))
+(terminals on)
+(pinCenter 520 310))
+(devCarrierFor 16
+(active icon)
+(icon
+(extent 89 52)
+(iconImage "build.icn"))
+(open
+(extent 117 162))
+(terminals on)
+(pinCenter 520 180))
+(devCarrierFor 17
+(active icon)
+(icon
+(extent 29 25))
+(open)
+(terminals on)
+(pinCenter 600 210))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 73 52)
+(iconImage "display.icn"))
+(open
+(extent 296 272)
+(displayMode 63)
+(graphType cartesian)
+(gridType grid)
+(scale 0
+(name "Y name")
+(domainName "X name")
+(Yspacing 10000)
+(Xspacing 10000)
+(scaleColor "Dark Gray")
+(show 1)
+(range 0 500 4 linear))
+(domain 63367666333.492 63367667233.492 4 linear)
+(trace 0 onScale 0
+(name "YData1")
+(traceColor "Yellow")
+(lineType 12)
+(pointType 0)))
+(terminals on)
+(pinCenter 630 120))
+(devCarrierFor 19
+(active open)
+(icon
+(extent 35 0))
+(open
+(extent 43 28)
+(just l))
+(title off)
+(pinCenter 530 380))
+(devCarrierFor 34
+(active icon)
+(icon
+(extent 63 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 210 -10))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 66 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 200 50))
+(devCarrierFor 39
+(active icon)
+(icon
+(extent 62 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 580 50))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 59 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 180 80))
+(devCarrierFor 41
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 344 93)
+(editing enabled))
+(pinCenter 410 -140))
+(devCarrierFor 43
+(active icon)
+(icon
+(extent 126 25))
+(open
+(extent 153 42))
+(terminals on)
+(pinCenter 320 -10))
+(devCarrierFor 45
+(active icon)
+(icon
+(extent 44 25))
+(open
+(extent 82 50))
+(terminals on)
+(pinCenter 460 0))
+(devCarrierFor 46
+(active icon)
+(icon
+(extent 62 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 580 0))
+(devCarrierFor 47
+(active icon)
+(icon
+(extent 126 25))
+(open
+(extent 153 42))
+(terminals on)
+(pinCenter 320 50))
+(devCarrierFor 48
+(active icon)
+(icon
+(extent 44 25))
+(open
+(extent 82 50))
+(terminals on)
+(pinCenter 460 60))
+(devCarrierFor 55
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter -20 -50))
+(devCarrierFor 58
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 119 51))
+(terminals on)
+(pinCenter -20 460))
+(devCarrierFor 59
+(active open)
+(icon
+(extent 91 16))
+(open
+(extent 131 28))
+(pinCenter 180 460))
+(devCarrierFor 60
+(active icon)
+(icon
+(extent 68 15))
+(open
+(extent 94 51))
+(terminals on)
+(pinCenter -20 520))
+(devCarrierFor 61
+(active open)
+(icon
+(extent 89 16))
+(open
+(extent 131 28))
+(pinCenter 180 520))
+(devCarrierFor 62
+(active icon)
+(icon
+(extent 92 15))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter -20 580))
+(devCarrierFor 63
+(active open)
+(icon
+(extent 81 16))
+(open
+(extent 131 28))
+(pinCenter 180 580))
+(devCarrierFor 64
+(active open)
+(icon
+(extent 84 16))
+(open
+(extent 131 28))
+(pinCenter 180 660))
+(devCarrierFor 65
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter -20 660))
+(devCarrierFor 66
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter -20 730))
+(devCarrierFor 67
+(active open)
+(icon
+(extent 57 16))
+(open
+(extent 131 28))
+(pinCenter 180 730))
+(connect D21:1 D0:1
+(points 6 212 80 230 80 230 90 280 90 280 110 307 110))
+(connect D28:0 D1:0
+(points 4 -20 -40 -20 160 160 160 160 179))
+(connect D7:1 D2:1
+(points 6 374 300 390 300 390 270 120 270 120 310 140 310))
+(connect D8:1 D3:1
+(points 8 374 320 390 320 390 350 270 350 270 340 130 340 130 370 150 370))
+(connect D28:1 D4:1
+(points 2 0 -50 62 -50))
+(connect D28:1 D5:1
+(points 6 0 -50 20 -50 20 150 250 150 250 160 329 160))
+(connect D1:1 D5:2
+(points 4 216 190 240 190 240 180 329 180))
+(connect D5:1 D6:1
+(points 6 391 170 410 170 410 240 280 240 280 210 296 210))
+(connect D11:1 D13:1
+(points 2 468 290 473 290))
+(connect D7:1 D13:2
+(points 6 374 300 390 300 390 260 460 260 460 300 473 300))
+(connect D8:1 D13:3
+(points 4 374 320 390 320 390 310 473 310))
+(connect D12:1 D13:4
+(points 2 468 330 473 320))
+(connect D9:1 D14:1
+(points 2 468 150 473 160))
+(connect D5:1 D14:2
+(points 2 391 170 473 170))
+(connect D28:1 D14:3
+(points 10 0 -50 20 -50 20 150 250 150 250 140 410 140 410 160 420 160 420 180
+473 180))
+(connect D10:1 D14:4
+(points 2 468 200 473 190))
+(connect D14:1 D15:1
+(points 6 567 180 580 180 580 190 570 190 570 200 583 200))
+(connect D13:1 D15:2
+(points 6 567 310 590 310 590 260 570 260 570 220 583 220))
+(connect D24:1 D16:1
+(points 4 484 0 530 0 530 110 591 110))
+(connect D27:1 D16:2
+(points 4 484 60 510 60 510 120 591 120))
+(connect D15:1 D16:3
+(points 6 617 210 640 210 640 170 580 170 580 130 591 130))
+(connect D27:1 D20:1
+(points 4 484 60 500 60 500 50 546 50))
+(connect D18:1 D23:1
+(points 2 244 -10 254 -10))
+(connect D23:1 D24:1
+(points 2 385 -10 435 -10))
+(connect D28:1 D24:2
+(points 8 0 -50 40 -50 40 -80 180 -80 180 -70 410 -70 410 10 435 10))
+(connect D24:1 D25:1
+(points 2 484 0 546 0))
+(connect D19:1 D26:1
+(points 2 235 50 254 50))
+(connect D26:1 D27:1
+(points 2 385 50 435 50))
+(connect D21:1 D27:2
+(points 6 212 80 230 80 230 90 420 90 420 70 435 70))
+(connect D28:0 D29:0
+(points 2 -20 -40 -20 450))
+(connect D29:1 D30:1
+(points 2 30 460 112 460))
+(connect D29:0 D31:0
+(points 2 -20 470 -20 510))
+(connect D31:1 D32:1
+(points 2 16 520 112 520))
+(connect D31:0 D33:0
+(points 2 -20 530 -20 570))
+(connect D33:1 D34:1
+(points 2 28 580 112 580))
+(connect D36:1 D35:1
+(points 2 39 660 112 660))
+(connect D33:0 D36:0
+(points 2 -20 590 -20 650))
+(connect D36:0 D37:0
+(points 2 -20 670 -20 720))
+(connect D37:1 D38:1
+(points 2 39 730 112 730)))
+(stackingOrder 11 12 13 15 17 9 16 2 3 6 22 10 8 25 24 20 18 23 19 27 7 26 21 14
+5 28 4 1 0 30 32 29 31 34 33 36 37 35 38))))
+(context 17
+(properties
+(name "SampleSetUp")
+(trigMode deg)
+(nextID 67)
+(popupTitleText "UserFunction1")
+(popupMoveable 1)
+(showPopupTitle 0))
+(deviceList
+(device 0 INPUTDLG
+(properties
+(popupTitle "Enter Sample ID")
+(position 240 245)
+(prompt "Enter Sample ID")
+(initialValue "Test")
+(valueConstraint "strLen(value)>0")
+(vErrorMessage "You must enter text."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "text")
+(titleBarBGColor "Med Dark Orange")))
+(device 1 ENUMCONSTANT
+(properties
+(name "Sample Type")
+(initializeAtPrerun 1))
+(interface
+(output 1
+(name "Enum")
+(lock name constraints))
+(output 2
+(name "Ordinal")
+(lock name constraints)))
+(implementation
+(value Enum
+(values
+("Standard(H)" 0)
+("1 Sample(B)" 1)
+("2 Samples(B,C)" 2)
+("3 Samples(B-D)" 3)
+("4 Samples(B-E)" 4)
+("5 Samples(B-F)" 5)
+("6 Samples(B-G)" 6))
+(data  "Standard(H)"))
+(initValue Text
+(data  "Standard(H)"))))
+(device 2 KNOB
+(properties
+(name "Repeat")
+(initializeAtPrerun 1)
+(range 1 20)
+(detents 1))
+(interface
+(output 1
+(name "Int32")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  1))
+(initValue Int32
+(data  1))))
+(device 7 CONFIRM25
+(properties
+(enterButton 1)
+(escapeButton 0)
+(isAssigned2FKey None))
+(interface
+(output 1
+(name "Go")
+(lock name constraints)))
+(implementation))
+(device 8 FORMULA
+(properties
+(name "HidePanel(\"SampleSetUp\")")
+(expr 1 "HidePanel(\"SampleSetUp\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 9 FORMULA
+(properties
+(name "ShowPanel(\"SampleSetUp\")")
+(expr 1 "ShowPanel(\"SampleSetUp\", 100, 100)"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 10 TOGLOBAL
+(properties
+(name "Repeat")
+(globalName "Repeat"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 11 TOGLOBAL
+(properties
+(name "SampleType")
+(globalName "SampleType"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 15 TOGLOBAL
+(properties
+(name "SampleID")
+(globalName "SampleID"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 17 TOGGLE25
+(properties
+(name "Quit")
+(initializeAtActivate 1))
+(interface
+(output 1
+(name "Toggle")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 18 IFTHENELSE
+(properties
+(cases 1 "a==1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 21 EXITPROCESS
+(properties
+(code 0)))
+(device 23 LITERALCONSTANT
+(properties
+(name "Empty Syringe")
+(description2 1
+"{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs18 Valve 1 to Port 2\\par\r\n}\r\n"
+))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "/1a0R"))
+(initValue Text
+(data  ""))))
+(device 36 FORMULA
+(properties
+(name "HidePanel(\"ErrorRecord\")")
+(expr 1 "HidePanel(\"ErrorRecord\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 37 FORMULA
+(properties
+(name "ShowPanel(\"ErrorRecord\")")
+(expr 1 "ShowPanel(\"ErrorRecord\")"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 38 IFTHENELSE
+(properties
+(cases 1 "1==A"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 41 TOGGLE25
+(properties
+(name "  Error Log")
+(initializeAtActivate 1))
+(interface
+(output 1
+(name "Toggle")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 44 TOGGLE25
+(properties
+(name "Acid Flush")
+(autoTrigger 1)
+(initializeAtActivate 1))
+(interface
+(output 1
+(name "Toggle")
+(lock name constraints)))
+(implementation
+(value Int32
+(data  0))
+(initValue Int32
+(data  0))))
+(device 45 IFTHENELSE
+(properties
+(cases 1 "a==1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 46 CALL
+(properties
+(name "Call AcidFlush")
+(callFunc "AcidFlush")
+(parmMode rev30)))
+(device 48 BREAK)
+(device 49 IODEVICE
+(properties
+(name "Serial10 ( @ 10)")
+(transactions 1 "WRITE TEXT a EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(iopath "Serial10")))
+(device 50 CALL
+(properties
+(name "Call ErrorRecord")
+(callFunc "ErrorRecord")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 51 CALL
+(properties
+(name "Call Open_Dump")
+(callFunc "Open_Dump")
+(parmMode rev30)))
+(device 52 CALL
+(properties
+(name "Call Full_Flow")
+(callFunc "Full_Flow")
+(parmMode rev30)))
+(device 53 DELAY
+(properties
+(delay 10))
+(interface
+(output 1
+(name "Done"))))
+(device 54 CALL
+(properties
+(name "Call Close_Dump")
+(callFunc "Close_Dump")
+(parmMode rev30)))
+(device 55 CALL
+(properties
+(name "Call Stop_Flow")
+(callFunc "Stop_Flow")
+(parmMode rev30)))
+(device 57 TOGLOBAL
+(properties
+(name "Set SampleCount")
+(globalName "SampleCount"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 60 IFTHENELSE
+(properties
+(cases 1 "a==0"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 61 FROMGLOBAL
+(properties
+(name "Get SampleCount")
+(globalName "SampleCount"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 63 TOGLOBAL
+(properties
+(name "Set SampleCount")
+(globalName "SampleCount"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 64 CONSTANT
+(properties
+(name "Int16"))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  1))
+(initValue Int16
+(data  0))))
+(device 66 DELAY
+(properties
+(delay 1))
+(interface
+(output 1
+(name "Done"))))
+(configuration
+(connect D17:0 D0:0)
+(connect D2:0 D1:0)
+(connect D3:0 D2:0)
+(connect D5:0 D3:0)
+(connect D0:0 D4:0)
+(connect D2:1 D6:1)
+(connect D1:2 D7:1)
+(connect D0:1 D8:1)
+(connect D1:0 D9:0)
+(connect D9:1 D10:1)
+(connect D33:0 D11:0)
+(connect D15:2 D13:0)
+(connect D15:1 D14:0)
+(connect D16:1 D15:1)
+(connect D9:0 D16:0)
+(connect D16:0 D17:0)
+(connect D17:1 D18:1)
+(connect D18:1 D19:0)
+(connect D0:2 D20:0)
+(connect D10:1 D21:0)
+(connect D12:1 D21:1)
+(connect D21:1 D22:1)
+(connect D21:0 D23:0)
+(connect D23:0 D24:0)
+(connect D24:0 D25:0)
+(connect D25:0 D26:0)
+(connect D26:0 D27:0)
+(connect D1:2 D28:1)
+(connect D30:1 D29:1)
+(connect D28:0 D30:0)
+(connect D29:1 D31:0)
+(connect D32:1 D31:1)
+(connect D27:0 D33:0)))
+(contextCarrier
+(wndOrigin 2 2)
+(wndState res)
+(active detail)
+(panel
+(extent 381 177)
+(drawGrid "off")
+(widget 2 detail
+(relativeOrigin 0 0)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 0)
+(title on)
+(tabIndex 0)
+(borderStyle flat)
+(extent 96 128)
+(layout horizontal)
+(fastmode off))
+(widget 3 detail
+(relativeOrigin 0 150)
+(bg "Green")
+(fg "Yellow")
+(font "Arial" 14 bold)
+(PID 1)
+(title off)
+(tabIndex 4)
+(borderStyle convex)
+(extent 376 27))
+(widget 1 detail
+(relativeOrigin 100 0)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 2)
+(title on)
+(titleBg "Golden Orange")
+(tabIndex 1)
+(borderStyle flat)
+(extent 136 128)
+(layout vertical)
+(format slider))
+(widget 9 detail
+(relativeOrigin 240 0)
+(bg "Med Dark Orange")
+(fg "Black")
+(PID 3)
+(title off)
+(tabIndex 2)
+(borderStyle convex)
+(extent 67 67)
+(scaled off)
+(showTitle on)
+(onFilename "stop.icn")
+(offFilename "stop.gif")
+(format custom))
+(widget 16 detail
+(relativeOrigin 240 70)
+(bg "Dark Yellow")
+(fg "Black")
+(PID 4)
+(title off)
+(tabIndex 3)
+(borderStyle convex)
+(extent 66 67)
+(scaled off)
+(showTitle on)
+(onFilename "arrow.gif")
+(offFilename "stop.gif")
+(format custom))
+(widget 17 detail
+(relativeOrigin 310 0)
+(bg "Green")
+(PID 5)
+(title off)
+(tabIndex 5)
+(borderStyle convex)
+(extent 67 67)
+(scaled off)
+(showTitle on)
+(onFilename "loop.icn")
+(offFilename "arrow.gif")
+(format custom))
+(panelBg "Light Blue Gray"))
+(detail
+(extent 877 834)
+(anchorPt -153 -46)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 57 25))
+(open
+(extent 254 103))
+(terminals on)
+(pinCenter 280 710))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 79 25))
+(open
+(extent 133 116)
+(layout vertical)
+(format slider))
+(pinCenter 280 370))
+(devCarrierFor 2
+(active open)
+(icon
+(extent 44 15))
+(open
+(extent 122 137)
+(layout horizontal)
+(fastmode on))
+(pinCenter 280 270))
+(devCarrierFor 7
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 280 130))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 166 15))
+(open
+(extent 182 50))
+(terminals on)
+(pinCenter 280 760))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 171 15))
+(open
+(extent 187 31))
+(terminals on)
+(pinCenter 280 70))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 44 15))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 470 270))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 75 15))
+(open
+(extent 101 51))
+(terminals on)
+(pinCenter 440 350))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 60 15))
+(open
+(extent 87 51))
+(terminals on)
+(pinCenter 400 700))
+(devCarrierFor 17
+(active open)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 75 65)
+(scaled off)
+(showTitle on)
+(onFilename "stop.icn")
+(offFilename "stop.gif")
+(format custom))
+(title off)
+(pinCenter 280 470))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 54 51))
+(terminals on)
+(pinCenter 390 470))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 65 31))
+(pinCenter 930 880))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 85 16))
+(open
+(extent 194 30))
+(pinCenter 790 520))
+(devCarrierFor 36
+(active icon)
+(icon
+(extent 155 15))
+(open
+(extent 172 31))
+(terminals on)
+(pinCenter 600 580))
+(devCarrierFor 37
+(active icon)
+(icon
+(extent 160 15))
+(open
+(extent 177 31))
+(terminals on)
+(pinCenter 600 540))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 54 51))
+(terminals on)
+(pinCenter 390 550))
+(devCarrierFor 41
+(active open)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 75 55)
+(scaled off)
+(showTitle on)
+(onFilename "arrow.gif")
+(offFilename "stop.gif")
+(format custom))
+(title off)
+(pinCenter 280 550))
+(devCarrierFor 44
+(active open)
+(icon
+(extent 68 51)
+(iconImage "stop.icn"))
+(open
+(extent 75 65)
+(scaled off)
+(showTitle on)
+(onFilename "stop.icn")
+(offFilename "stop.gif")
+(format custom))
+(title off)
+(pinCenter 280 640))
+(devCarrierFor 45
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 54 51))
+(terminals on)
+(pinCenter 480 640))
+(devCarrierFor 46
+(active icon)
+(icon
+(extent 86 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 650 700))
+(devCarrierFor 48
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 430 760))
+(devCarrierFor 49
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 930 520))
+(devCarrierFor 50
+(active icon)
+(icon
+(extent 101 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 1060 520))
+(devCarrierFor 51
+(active icon)
+(icon
+(extent 105 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 930 590))
+(devCarrierFor 52
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 930 630))
+(devCarrierFor 53
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 930 680))
+(devCarrierFor 54
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 930 720))
+(devCarrierFor 55
+(active icon)
+(icon
+(extent 91 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 930 770))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 106 15))
+(open
+(extent 108 51))
+(terminals on)
+(pinCenter 450 380))
+(devCarrierFor 60
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 54 51))
+(terminals on)
+(pinCenter 590 420))
+(devCarrierFor 61
+(active icon)
+(icon
+(extent 107 15))
+(open
+(extent 108 51))
+(terminals on)
+(pinCenter 450 420))
+(devCarrierFor 63
+(active icon)
+(icon
+(extent 106 15))
+(open
+(extent 108 51))
+(terminals on)
+(pinCenter 850 420))
+(devCarrierFor 64
+(active icon)
+(icon
+(extent 31 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 730 420))
+(devCarrierFor 66
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 930 810))
+(connect D17:0 D0:0
+(points 2 280 675 280 695))
+(connect D2:0 D1:0
+(points 2 280 341 280 355))
+(connect D3:0 D2:0
+(points 2 280 143 280 181))
+(connect D5:0 D3:0
+(points 2 280 80 280 116))
+(connect D0:0 D4:0
+(points 2 280 725 280 750))
+(connect D2:1 D6:1
+(points 2 343 270 445 270))
+(connect D1:2 D7:1
+(points 4 322 380 370 380 370 350 400 350))
+(connect D0:1 D8:1
+(points 2 311 700 367 700))
+(connect D1:0 D9:0
+(points 2 280 385 280 435))
+(connect D9:1 D10:1
+(points 2 320 470 352 470))
+(connect D33:0 D11:0
+(points 2 930 820 930 852))
+(connect D15:2 D13:0
+(points 3 428 560 600 560 600 570))
+(connect D15:1 D14:0
+(points 5 428 540 450 540 450 510 600 510 600 530))
+(connect D16:1 D15:1
+(points 2 320 550 352 550))
+(connect D9:0 D16:0
+(points 2 280 505 280 520))
+(connect D16:0 D17:0
+(points 2 280 580 280 605))
+(connect D17:1 D18:1
+(points 2 320 640 442 640))
+(connect D18:1 D19:0
+(points 3 518 630 650 630 650 690))
+(connect D0:2 D20:0
+(points 5 311 720 330 720 330 730 430 730 430 750))
+(connect D10:1 D21:0
+(points 3 428 460 930 460 930 492))
+(connect D12:1 D21:1
+(points 2 835 520 879 520))
+(connect D21:1 D22:1
+(points 2 981 520 1007 520))
+(connect D21:0 D23:0
+(points 2 930 548 930 580))
+(connect D23:0 D24:0
+(points 2 930 600 930 620))
+(connect D24:0 D25:0
+(points 2 930 640 930 670))
+(connect D25:0 D26:0
+(points 2 930 690 930 710))
+(connect D26:0 D27:0
+(points 2 930 730 930 760))
+(connect D1:2 D28:1
+(points 2 322 380 394 380))
+(connect D30:1 D29:1
+(points 2 506 420 552 420))
+(connect D28:0 D30:0
+(points 2 450 390 450 410))
+(connect D29:1 D31:0
+(points 5 628 410 650 410 650 390 850 390 850 410))
+(connect D32:1 D31:1
+(points 2 748 420 794 420))
+(connect D27:0 D33:0
+(points 2 930 780 930 800)))
+(stackingOrder 5 2 3 6 14 13 16 8 15 9 17 4 18 19 20 10 22 21 24 27 31 12 0 23
+28 1 29 32 30 7 26 25 11 33))))
+(context 16
+(properties
+(name "SaveData")
+(trigMode deg)
+(nextID 29)
+(popupTitleText "UserObject")
+(popupMoveable 1)
+(showPopupTitle 0)
+(showPopupBorder 0))
+(deviceList
+(device 0 FROMGLOBAL
+(properties
+(name "SampleID")
+(globalName "SampleID"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 1 FROMGLOBAL
+(properties
+(name "SampleTime")
+(globalName "SampleTime"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 2 FROMGLOBAL
+(properties
+(name "pCO2_integrate")
+(globalName "pCO2_integrate"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 3 FROMGLOBAL
+(properties
+(name "pCO2_start")
+(globalName "pCO2_start"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 4 FROMGLOBAL
+(properties
+(name "pCO2_max")
+(globalName "pCO2_max"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 5 FROMGLOBAL
+(properties
+(name "pCO2_end")
+(globalName "pCO2_end"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 6 FROMGLOBAL
+(properties
+(name "H2O")
+(globalName "H2O"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 7 FROMGLOBAL
+(properties
+(name "CO2Temp")
+(globalName "CO2Temp"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 8 FROMGLOBAL
+(properties
+(name "CO2Pres")
+(globalName "CO2Pres"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 9 TOSTRING
+(properties
+(transactions 27 "WRITE TEXT a STR" "WRITE TEXT \",\" STR"
+"WRITE TEXT B DATE:DMY TIME:HMS:H24" "WRITE TEXT \",\" STR" "WRITE TEXT B"
+"WRITE TEXT \",\" STR" "WRITE TEXT C REAL64 FIX:0" "WRITE TEXT \",\" STR"
+"WRITE TEXT D REAL64 FIX:2" "WRITE TEXT \",\" STR" "WRITE TEXT E REAL64 FIX:2"
+"WRITE TEXT \",\" STR" "WRITE TEXT F REAL64 FIX:2" "WRITE TEXT \",\" STR"
+"WRITE TEXT G REAL64 FIX:2" "WRITE TEXT \",\" STR" "WRITE TEXT H REAL64 FIX:2"
+"WRITE TEXT \",\" STR" "WRITE TEXT I REAL64 FIX:2" "WRITE TEXT \",\" STR"
+"WRITE TEXT j REAL64 FIX:2" "WRITE TEXT \",\" STR" "WRITE TEXT k INT16"
+"WRITE TEXT \",\" STR" "WRITE TEXT l INT16" "WRITE TEXT \",\" STR"
+"WRITE TEXT m INT16 EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "E")
+(optional yes))
+(input 6
+(name "F")
+(optional yes))
+(input 7
+(name "G")
+(optional yes))
+(input 8
+(name "H")
+(optional yes))
+(input 9
+(name "I")
+(optional yes))
+(input 10
+(name "J")
+(optional yes))
+(input 11
+(name "K")
+(optional yes))
+(input 12
+(name "L")
+(optional yes))
+(input 13
+(name "M")
+(optional yes))
+(output 1
+(name "result")
+(lock name constraints)))
+(implementation
+(attr iopath string write "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 10 TOFILE
+(properties
+(transactions 2 "WRITE TEXT a EOL" "EXECUTE CLOSE"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file append "C:\\TCO2\\01-14-2009.DIC"
+(readTerm "\n")
+(fs "\r\n")
+(eol "\r\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 11 FROMGLOBAL
+(properties
+(name "DataFile")
+(globalName "DataFile"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 12 TOSTRING
+(properties
+(transactions 21 "WRITE TEXT a STR FW:13 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT B DATE:DMY TIME:HMS:H24" "WRITE TEXT \"  \" STR"
+"WRITE TEXT C REAL64 FIX:0 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT D REAL64 FIX:2 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT E REAL64 FIX:2 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT F REAL64 FIX:2 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT G REAL64 FIX:2 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT H REAL64 FIX:2 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT I REAL64 FIX:2 FW:6 RJ" "WRITE TEXT \"  \" STR"
+"WRITE TEXT j REAL64 FIX:2" "WRITE TEXT \"  \" STR"
+"WRITE TEXT k INT16 FW:6 RJ EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "E")
+(optional yes))
+(input 6
+(name "F")
+(optional yes))
+(input 7
+(name "G")
+(optional yes))
+(input 8
+(name "H")
+(optional yes))
+(input 9
+(name "I")
+(optional yes))
+(input 10
+(name "J")
+(optional yes))
+(input 11
+(name "K")
+(optional yes))
+(output 1
+(name "result")
+(lock name constraints)))
+(implementation
+(attr iopath string write "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 13 SCROLLINGTEXTDISPLAY
+(properties
+(clearAtActivate 0)
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(device 15 FROMGLOBAL
+(properties
+(name "TCO2Error")
+(globalName "TCO2Error"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 18 FROMGLOBAL
+(properties
+(name "PeakAvg")
+(globalName "PeakAvg"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 21 FORMULA
+(properties
+(name "PeakAvg = 0")
+(expr 1 "PeakAvg = 0"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 22 FORMULA
+(properties
+(name "PeakRead = 0")
+(expr 1 "PeakRead = 0"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 25 FORMULA
+(properties
+(name "TCO2Error = 2")
+(expr 1 "TCO2Error = -1"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 26 FROMGLOBAL
+(properties
+(name "Get Valve_Position")
+(globalName "Valve_Position"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 27 FROMGLOBAL
+(properties
+(name "Get CurrentRepeat")
+(globalName "CurrentRepeat"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(configuration
+(connect D0:1 D9:1)
+(connect D1:1 D9:2)
+(connect D2:1 D9:3)
+(connect D15:1 D9:4)
+(connect D4:1 D9:5)
+(connect D3:1 D9:6)
+(connect D5:1 D9:7)
+(connect D6:1 D9:8)
+(connect D7:1 D9:9)
+(connect D8:1 D9:10)
+(connect D14:1 D9:11)
+(connect D19:1 D9:12)
+(connect D20:1 D9:13)
+(connect D9:1 D10:1)
+(connect D11:1 D10:2)
+(connect D9:0 D12:0)
+(connect D0:1 D12:1)
+(connect D1:1 D12:2)
+(connect D2:1 D12:3)
+(connect D15:1 D12:4)
+(connect D4:1 D12:5)
+(connect D3:1 D12:6)
+(connect D5:1 D12:7)
+(connect D6:1 D12:8)
+(connect D7:1 D12:9)
+(connect D8:1 D12:10)
+(connect D14:1 D12:11)
+(connect D12:1 D13:1)
+(connect D18:0 D16:0)
+(connect D16:0 D17:0)
+(connect D12:0 D18:0)))
+(contextCarrier
+(active panel)
+(panel
+(extent 844 202)
+(drawGrid "off")
+(widget 13 detail
+(relativeOrigin 0 0)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 776 186)
+(formatter
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal)))
+(panelBg "Light Blue Gray"))
+(detail
+(extent 350 300)
+(anchorPt 73 113)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 60 15))
+(open
+(extent 87 51))
+(terminals on)
+(pinCenter 120 80))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 78 15))
+(open
+(extent 103 51))
+(terminals on)
+(pinCenter 110 110))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 119 51))
+(terminals on)
+(pinCenter 100 140))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 69 15))
+(open
+(extent 95 51))
+(terminals on)
+(pinCenter 110 280))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 68 15))
+(open
+(extent 94 51))
+(terminals on)
+(pinCenter 110 240))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 65 15))
+(open
+(extent 92 51))
+(terminals on)
+(pinCenter 110 310))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 29 15))
+(open
+(extent 57 51))
+(terminals on)
+(pinCenter 120 340))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 62 15))
+(open
+(extent 89 51))
+(terminals on)
+(pinCenter 110 370))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 56 15))
+(open
+(extent 83 51))
+(terminals on)
+(pinCenter 110 410))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 53 134))
+(open
+(extent 235 337))
+(terminals on)
+(pinCenter 620 120))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 41 25))
+(open
+(extent 231 127))
+(terminals on)
+(pinCenter 810 130))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 78 51))
+(terminals on)
+(pinCenter 730 150))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 53 114))
+(open
+(extent 295 307))
+(terminals on)
+(pinCenter 620 560))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 138 15))
+(open
+(extent 174 167)
+(noformatter))
+(pinCenter 870 560))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 64 15))
+(open
+(extent 91 51))
+(terminals on)
+(pinCenter 110 440))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 51 15))
+(open
+(extent 79 51))
+(terminals on)
+(pinCenter 100 190))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 73 15))
+(open
+(extent 98 31))
+(terminals on)
+(pinCenter 610 760))
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 109 31))
+(terminals on)
+(pinCenter 610 790))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 86 15))
+(open
+(extent 110 31))
+(terminals on)
+(pinCenter 610 730))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter 110 480))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter 110 520))
+(connect D0:1 D9:1
+(points 6 152 80 170 80 170 70 550 70 550 60 591 60))
+(connect D1:1 D9:2
+(points 6 151 110 180 110 180 80 560 80 560 70 591 70))
+(connect D2:1 D9:3
+(points 6 150 140 190 140 190 90 570 90 570 80 591 80))
+(connect D15:1 D9:4
+(points 4 128 190 580 190 580 90 591 90))
+(connect D4:1 D9:5
+(points 6 146 240 230 240 230 250 300 250 300 100 591 100))
+(connect D3:1 D9:6
+(points 4 147 280 310 280 310 110 591 110))
+(connect D5:1 D9:7
+(points 6 145 310 250 310 250 320 320 320 320 120 591 120))
+(connect D6:1 D9:8
+(points 4 137 340 330 340 330 130 591 130))
+(connect D7:1 D9:9
+(points 6 143 370 170 370 170 130 200 130 200 140 591 140))
+(connect D8:1 D9:10
+(points 4 140 410 180 410 180 150 591 150))
+(connect D14:1 D9:11
+(points 4 144 440 190 440 190 160 591 160))
+(connect D19:1 D9:12
+(points 4 169 480 200 480 200 170 591 170))
+(connect D20:1 D9:13
+(points 8 169 520 180 520 180 550 30 550 30 170 150 170 150 180 591 180))
+(connect D9:1 D10:1
+(points 2 649 120 787 120))
+(connect D11:1 D10:2
+(points 4 757 150 770 150 770 140 787 140))
+(connect D9:0 D12:0
+(points 2 620 189 620 500))
+(connect D0:1 D12:1
+(points 10 152 80 170 80 170 70 550 70 550 20 690 20 690 220 560 220 560 510 591
+510))
+(connect D1:1 D12:2
+(points 10 151 110 180 110 180 80 560 80 560 30 680 30 680 210 580 210 580 520
+591 520))
+(connect D2:1 D12:3
+(points 10 150 140 190 140 190 90 570 90 570 40 670 40 670 200 570 200 570 530
+591 530))
+(connect D15:1 D12:4
+(points 4 128 190 370 190 370 540 591 540))
+(connect D4:1 D12:5
+(points 6 146 240 230 240 230 250 360 250 360 550 591 550))
+(connect D3:1 D12:6
+(points 4 147 280 350 280 350 560 591 560))
+(connect D5:1 D12:7
+(points 6 145 310 250 310 250 320 340 320 340 570 591 570))
+(connect D6:1 D12:8
+(points 4 137 340 330 340 330 580 591 580))
+(connect D7:1 D12:9
+(points 4 143 370 320 370 320 590 591 590))
+(connect D8:1 D12:10
+(points 4 140 410 310 410 310 600 591 600))
+(connect D14:1 D12:11
+(points 4 144 440 190 440 190 610 591 610))
+(connect D12:1 D13:1
+(points 2 649 560 798 560))
+(connect D18:0 D16:0
+(points 2 610 740 610 750))
+(connect D16:0 D17:0
+(points 2 610 770 610 780))
+(connect D12:0 D18:0
+(points 4 620 619 620 640 610 640 610 720)))
+(stackingOrder 3 4 7 8 0 1 6 5 18 16 17 11 15 2 10 12 14 19 20 9 13))))
+(context 23
+(properties
+(name "Stop_Flow")
+(trigMode deg)
+(nextID 4)
+(popupTitleText "UserFunction1")
+(popupMoveable 1))
+(deviceList
+(device 0 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 4 "WRITE BYTE 254" "WRITE BYTE 2" "WRITE BYTE 254" "WRITE BYTE 11"
+))
+(implementation
+(iopath "Serial12")))
+(device 1 START25)
+(device 3 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Turn off relay #3\\par\r\nTurn on relay #4\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:0 D0:0)))
+(contextCarrier
+(wndOrigin 22 22)
+(wndState res)
+(active detail)
+(detail
+(extent 855 673)
+(anchorPt 197 54)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 520 400))
+(devCarrierFor 1
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 510 240))
+(devCarrierFor 3
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 184 66)
+(editing enabled))
+(pinCenter 790 410))
+(connect D1:0 D0:0
+(points 4 510 253 510 270 520 270 520 342)))
+(stackingOrder 1 0 2)))))
+(device 30 REPEATUNTILBREAK
+(interface
+(output 1
+(name "Continuous")
+(lock name constraints))))
+(device 109 CONTEXT
+(properties
+(name "Initialize")
+(trigMode deg)
+(nextID 153)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 2 TOGLOBAL
+(properties
+(name "SampleID")
+(globalName "SampleID"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 3 DECLVAR
+(properties
+(name "SampleID")
+(scope glob)
+(globalName "SampleID"))
+(implementation
+(value Text
+(data  ""))))
+(device 4 LITERALCONSTANT
+(properties
+(name "Kloehn Init.")
+(description2 1 "Valve 2 to port 2"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "/1W4R"))
+(initValue Text
+(data  ""))))
+(device 6 LITERALCONSTANT
+(properties
+(name "Empty Syringe")
+(description2 1 "Valve 1 to Port 2"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "/1o1a0R"))
+(initValue Text
+(data  ""))))
+(device 9 TOGLOBAL
+(properties
+(name "CO2Pres")
+(globalName "CO2Pres"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 10 DECLVAR
+(properties
+(name "CO2Pres")
+(scope glob)
+(globalName "CO2Pres"))
+(implementation
+(value Real64
+(data  0))))
+(device 11 TOGLOBAL
+(properties
+(name "SampleCount")
+(globalName "SampleCount"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 12 DECLVAR
+(properties
+(name "SampleCount")
+(scope glob)
+(globalName "SampleCount"))
+(implementation
+(value Real64
+(data  0))))
+(device 13 CONSTANT
+(properties
+(name "Real"))
+(interface
+(output 1
+(name "Real")
+(lock name constraints)))
+(implementation
+(value Real
+(data  0))
+(initValue Real
+(data  0))))
+(device 14 TOGLOBAL
+(properties
+(name "CO2Temp")
+(globalName "CO2Temp"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 15 TOGLOBAL
+(properties
+(name "pCO2")
+(globalName "pCO2"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 16 DECLVAR
+(properties
+(name "CO2Temp")
+(scope glob)
+(globalName "CO2Temp"))
+(implementation
+(value Real64
+(data  0))))
+(device 17 DECLVAR
+(properties
+(name "pCO2")
+(scope glob)
+(globalName "pCO2"))
+(implementation
+(value Real64
+(data  0))))
+(device 18 DECLVAR
+(properties
+(name "DataFile")
+(scope glob)
+(globalName "DataFile"))
+(implementation
+(value Text
+(data  ""))))
+(device 19 TOGLOBAL
+(properties
+(globalName "DataFile"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 20 FILESELECT
+(properties
+(name "File Name Selection")
+(prompt "Enter File Name:")
+(initialDirectory "C:\\TCO2\\")
+(initialFile "01-14-2009.DIC")
+(dialogMode Writing))
+(interface
+(input 1
+(name "Initial File")
+(tag "Initial File")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "File Name")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation))
+(device 21 TOSTRING
+(properties
+(transactions 6 "WRITE TEXT a INT32:2" "WRITE TEXT \"-\"" "WRITE TEXT b INT32:2"
+"WRITE TEXT \"-\"" "WRITE TEXT c INT32:4" "WRITE TEXT d EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(output 1
+(name "result")
+(lock name constraints)))
+(implementation
+(attr iopath string write "string"
+(readTerm "\n")
+(fs " ")
+(eol "\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 22 FORMULA
+(properties
+(name "now()")
+(expr 1 "now()"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 23 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  ".DIC"))
+(initValue Text
+(data  ""))))
+(device 24 FORMULA
+(properties
+(name "year(aDate)")
+(expr 1 "year(aDate)"))
+(interface
+(input 1
+(name "aDate")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 25 FORMULA
+(properties
+(name "mday(aDate)")
+(expr 1 "mday(aDate)"))
+(interface
+(input 1
+(name "aDate")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 26 FORMULA
+(properties
+(name "month(aDate)")
+(expr 1 "month(aDate)"))
+(interface
+(input 1
+(name "aDate")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 27 DECLVAR
+(properties
+(name "SampleTime")
+(scope glob)
+(globalName "SampleTime"))
+(implementation
+(value Real64
+(data  0))))
+(device 28 TOGLOBAL
+(properties
+(name "SampleTime")
+(globalName "SampleTime"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 29 FORMULA
+(properties
+(name "now()")
+(expr 1 "now()"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 32 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Declare and set initial values for global variables\\par\r\n}\r\n"
+)))
+(device 33 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Initialize Syringe\\par\r\n}\r\n"
+)))
+(device 34 DECLVAR
+(properties
+(name "Declare pCO2_end")
+(scope glob)
+(globalName "pCO2_end"))
+(implementation
+(value Real64
+(data  0))))
+(device 35 TOGLOBAL
+(properties
+(name "Set pCO2_end")
+(globalName "pCO2_end"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 36 DECLVAR
+(properties
+(name "Operation")
+(scope glob)
+(globalName "Operation"))
+(implementation
+(value Text
+(data  ""))))
+(device 37 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "not ready"))
+(initValue Text
+(data  ""))))
+(device 38 TOGLOBAL
+(properties
+(name "Operation")
+(globalName "Operation"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 43 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Select a file to store data\\par\r\n}\r\n"
+)))
+(device 44 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Send set up string to LiCor\\par\r\nWrite LiCor configuration to file\\par\r\n\\par\r\n}\r\n"
+)))
+(device 48 LITERALCONSTANT
+(properties
+(name "Set Licor Print String"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"(RS232(Sources (\"CO2B um/m\" \"H2OB mm/m\"  \"Integral\" \"Peak\" \"P kPa\" \"T C\" )))"
+))
+(initValue Text
+(data  ""))))
+(device 51 TOFILE
+(properties
+(transactions 2 "WRITE TEXT a EOL" "EXECUTE CLOSE"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(type control)
+(name "File Name")
+(requires
+(datatype Text)
+(shape "Scalar"))
+(lock name constraints)
+(optional yes)))
+(implementation
+(attr iopath file append "C:\\TCO2\\01-14-2009.DIC"
+(readTerm "\n")
+(fs "\r\n")
+(eol "\r\n")
+(multiField fullSyntax)
+(arrayFormat block))))
+(device 54 START25)
+(device 55 DECLVAR
+(properties
+(name "Declare pCO2_start")
+(scope glob)
+(globalName "pCO2_start"))
+(implementation
+(value Real64
+(data  0))))
+(device 56 DECLVAR
+(properties
+(name "H2O")
+(scope glob)
+(globalName "H2O"))
+(implementation
+(value Real64
+(data  0))))
+(device 57 TOGLOBAL
+(properties
+(name "H2O")
+(globalName "H2O"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 58 TOGLOBAL
+(properties
+(name "Set pCO2_start")
+(globalName "pCO2_start"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 62 DECLVAR
+(properties
+(name "Xplot")
+(scope glob)
+(globalName "Xplot"))
+(implementation
+(value Real64
+(numDims 1)
+(size 1)
+(data  [ 0 ]))))
+(device 63 DECLVAR
+(properties
+(name "Yplot")
+(scope glob)
+(globalName "Yplot"))
+(implementation
+(value Real64
+(numDims 1)
+(size 1)
+(data  [ 0 ]))))
+(device 64 ALLOCATEARRAY
+(properties
+(name "Alloc Real"))
+(interface
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "10000")
+(type "Real64")
+(initEnum "Init Value")
+(initialValue
+(data  0))
+(from 1)
+(thru 10)))
+(device 65 TOGLOBAL
+(properties
+(name "Xplot")
+(globalName "Xplot"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 66 TOGLOBAL
+(properties
+(name "Yplot")
+(globalName "Yplot"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 72 ALLOCATEARRAY
+(properties
+(name "Alloc Real"))
+(interface
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "10000")
+(type "Real64")
+(initEnum "Init Value")
+(initialValue
+(data  63109989412.85))
+(from 1)
+(thru 10)))
+(device 87 DECLVAR
+(properties
+(name "Declare LicorData")
+(scope glob)
+(globalName "LicorData"))
+(implementation
+(value Real64
+(numDims 1)
+(size 1)
+(data  [ 0 ]))))
+(device 88 TOGLOBAL
+(properties
+(name "LicorData")
+(globalName "LicorData"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 89 DECLVAR
+(properties
+(name "Declare pCO2_integrate")
+(scope glob)
+(globalName "pCO2_integrate"))
+(implementation
+(value Real64
+(data  0))))
+(device 90 TOGLOBAL
+(properties
+(name "pCO2_integrate")
+(globalName "pCO2_integrate"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 91 DECLVAR
+(properties
+(name "Declare pCO2_max")
+(scope glob)
+(globalName "pCO2_max"))
+(implementation
+(value Real64
+(data  0))))
+(device 92 TOGLOBAL
+(properties
+(name "pCO2_max")
+(globalName "pCO2_max"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 93 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Test"))
+(initValue Text
+(data  ""))))
+(device 95 DECLVAR
+(properties
+(name "Declare SampleType")
+(scope glob)
+(globalName "SampleType"))
+(implementation
+(value Int16
+(data  0))))
+(device 96 DECLVAR
+(properties
+(name "Declare Repeat")
+(scope glob)
+(globalName "Repeat"))
+(implementation
+(value Int16
+(data  0))))
+(device 97 TOGLOBAL
+(properties
+(name "SampleType")
+(globalName "SampleType"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 98 TOGLOBAL
+(properties
+(name "Repeat")
+(globalName "Repeat"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 99 CONSTANT
+(properties
+(name "Int16"))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  0))
+(initValue Int16
+(data  0))))
+(device 100 CONSTANT
+(properties
+(name "Int16"))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  1))
+(initValue Int16
+(data  0))))
+(device 101 DECLVAR
+(properties
+(name "Declare SequenceTime")
+(scope glob)
+(globalName "SequenceTime"))
+(implementation
+(value Int16
+(data  0))))
+(device 102 TOGLOBAL
+(properties
+(name "SequenceTime")
+(globalName "SequenceTime"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 103 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Test"))
+(initValue Text
+(data  ""))))
+(device 104 TOGLOBAL
+(properties
+(name "DataFile")
+(globalName "DataFile"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 106 DECLVAR
+(properties
+(name "Declare ComError")
+(scope glob)
+(globalName "ComError"))
+(implementation
+(value Int16
+(data  0))))
+(device 108 TOGLOBAL
+(properties
+(name "ComError")
+(globalName "ComError"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 109 DECLVAR
+(properties
+(name "Declare SyringeCom")
+(scope glob)
+(globalName "SyringeCom"))
+(implementation
+(value Text
+(data  ""))))
+(device 110 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 111 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  ""))
+(initValue Text
+(data  ""))))
+(device 112 CONSTANT
+(properties
+(name "Int16"))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  0))
+(initValue Int16
+(data  0))))
+(device 113 DECLVAR
+(properties
+(name "Declare ErrorLog")
+(scope glob)
+(globalName "ErrorLog"))
+(implementation
+(value Text
+(data  ""))))
+(device 114 TOGLOBAL
+(properties
+(name "ErrorLog")
+(globalName "ErrorLog"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 115 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  ""))
+(initValue Text
+(data  ""))))
+(device 118 FROMGLOBAL
+(properties
+(name "DataFile")
+(globalName "DataFile"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 119 DECLVAR
+(properties
+(name "Declare TCO2Error")
+(scope glob)
+(globalName "TCO2Error"))
+(implementation
+(value Int16
+(data  0))))
+(device 120 TOGLOBAL
+(properties
+(name "TCO2Error")
+(globalName "TCO2Error"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 121 CONSTANT
+(properties
+(name "Int16"))
+(interface
+(output 1
+(name "Int16")
+(lock name constraints)))
+(implementation
+(value Int16
+(data  -1))
+(initValue Int16
+(data  0))))
+(device 122 DECLVAR
+(properties
+(name "Declare PeakAvg")
+(scope glob)
+(globalName "PeakAvg"))
+(implementation
+(value Real64
+(data  0))))
+(device 123 TOGLOBAL
+(properties
+(name "PeakAvg")
+(globalName "PeakAvg"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 124 DECLVAR
+(properties
+(name "Declare PeakRead")
+(scope glob)
+(globalName "PeakRead"))
+(implementation
+(value Int16
+(data  0))))
+(device 125 TOGLOBAL
+(properties
+(name "PeakRead")
+(globalName "PeakRead"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 127 TEXTDISPLAY
+(interface
+(input 1
+(name "Data"))))
+(device 133 SCROLLINGTEXTDISPLAY
+(properties
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(device 134 LITERALCONSTANT
+(properties
+(name "Valve Type"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "/1~V10R"))
+(initValue Text
+(data  ""))))
+(device 136 ALLOCATEARRAY
+(properties
+(name "Alloc Real"))
+(interface
+(output 1
+(name "Array")
+(tag "Array")))
+(implementation
+(numDims 1)
+(dimSizes "7")
+(type "Real64")
+(initEnum "Init Value")
+(initialValue
+(data  0))
+(from 1)
+(thru 10)))
+(device 135 LITERALCONSTANT
+(properties
+(name "Request Data"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "(RS232(Poll Now))"))
+(initValue Text
+(data  ""))))
+(device 139 IODEVICE
+(properties
+(name "Serial10 ( @ 10)")
+(transactions 5 "EXECUTE RESET" "WRITE TEXT a STR EOL" "WAIT INTERVAL:10"
+"WRITE TEXT c STR EOL" "READ TEXT x STR"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(output 1
+(name "X")
+(optional yes)))
+(implementation
+(iopath "Serial10")))
+(device 140 IODEVICE
+(properties
+(name "serial11 ( @ 11)")
+(transactions 5 "EXECUTE RESET" "WRITE TEXT a STR EOL" "READ TEXT x STR"
+"WRITE TEXT b STR EOL" "READ TEXT x STR"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "X")
+(optional yes))
+(output 2
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(iopath "serial11")))
+(device 141 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 2 "WRITE BYTE 254" "WRITE BYTE 8"))
+(implementation
+(iopath "Serial12")))
+(device 142 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Open dump\\par\r\n}\r\n"
+)))
+(device 144 DELAY
+(properties
+(delay 5))
+(interface
+(output 1
+(name "Done"))))
+(device 145 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Courier New;}}\r\n\\viewkind4\\uc1\\pard\\f0\\fs18 Close dump then stop gas flow\\par\r\n}\r\n"
+)))
+(device 146 DECLVAR
+(properties
+(name "Declare Valve_Position")
+(scope glob)
+(globalName "Valve_Position"))
+(implementation
+(value Int16
+(data  0))))
+(device 147 TOGLOBAL
+(properties
+(name "Set Valve_Position")
+(globalName "Valve_Position"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 148 DECLVAR
+(properties
+(name "Declare CurrentRepeat")
+(scope glob)
+(globalName "CurrentRepeat"))
+(implementation
+(value Int16
+(data  0))))
+(device 149 TOGLOBAL
+(properties
+(name "Set CurrentRepeat")
+(globalName "CurrentRepeat"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 150 CALL
+(properties
+(name "Call Stop_Flow")
+(callFunc "Stop_Flow")
+(parmMode rev30)))
+(device 151 DELAY
+(properties
+(delay 1))
+(interface
+(output 1
+(name "Done"))))
+(device 152 CALL
+(properties
+(name "Call Close_Dump")
+(callFunc "Close_Dump")
+(parmMode rev30)))
+(configuration
+(connect D53:1 D0:1)
+(connect D8:1 D4:1)
+(connect D8:1 D6:1)
+(connect D8:1 D9:1)
+(connect D8:1 D10:1)
+(connect D15:1 D14:1)
+(connect D16:1 D15:1)
+(connect D21:1 D16:1)
+(connect D20:1 D16:2)
+(connect D19:1 D16:3)
+(connect D18:1 D16:4)
+(connect D36:0 D17:0)
+(connect D17:1 D19:1)
+(connect D17:1 D20:1)
+(connect D17:1 D21:1)
+(connect D24:1 D23:1)
+(connect D8:1 D28:1)
+(connect D30:1 D31:1)
+(connect D87:1 D35:1)
+(connect D73:1 D35:2)
+(connect D8:1 D39:1)
+(connect D8:1 D40:1)
+(connect D46:1 D44:1)
+(connect D43:1 D45:1)
+(connect D84:1 D48:1)
+(connect D8:1 D50:1)
+(connect D8:1 D52:1)
+(connect D58:1 D56:1)
+(connect D59:1 D57:1)
+(connect D58:1 D61:1)
+(connect D62:1 D63:1)
+(connect D69:1 D65:1)
+(connect D68:1 D67:1)
+(connect D72:1 D71:1)
+(connect D87:1 D73:0)
+(connect D76:1 D75:1)
+(connect D8:1 D78:1)
+(connect D58:1 D80:1)
+(connect D87:2 D81:1)
+(connect D86:1 D82:1)
+(connect D88:0 D86:0)
+(connect D2:1 D86:1)
+(connect D83:1 D86:2)
+(connect D3:1 D86:3)
+(connect D86:0 D87:0)
+(connect D34:1 D87:1)
+(connect D85:1 D87:2)
+(connect D15:0 D88:0)
+(connect D87:0 D90:0)
+(connect D59:1 D93:1)
+(connect D59:1 D95:1)
+(connect D97:0 D96:0)
+(connect D98:0 D97:0)
+(connect D90:0 D98:0)))
+(contextCarrier
+(wndOrigin 102 102)
+(wndState res)
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 15 -385)
+(configuration
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 66 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 450 -600))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 66 16))
+(open
+(extent 215 107))
+(pinCenter 150 -560))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 67 20))
+(open
+(extent 194 30))
+(pinCenter 230 450))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 85 16))
+(open
+(extent 194 30))
+(pinCenter 230 510))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 63 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -650))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 63 16))
+(open
+(extent 215 107))
+(pinCenter 140 -660))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 93 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -630))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 93 16))
+(open
+(extent 215 107))
+(pinCenter 150 -580))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 34 16))
+(open
+(extent 69 30)
+(showFormat real))
+(pinCenter 290 -700))
+(devCarrierFor 14
+(active icon)
+(icon
+(extent 71 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -690))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 41 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -730))
+(devCarrierFor 16
+(active icon)
+(icon
+(extent 71 16))
+(open
+(extent 215 107))
+(pinCenter 140 -700))
+(devCarrierFor 17
+(active icon)
+(icon
+(extent 41 16))
+(open
+(extent 215 107))
+(pinCenter 140 -780))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 58 16))
+(open
+(extent 215 107))
+(pinCenter 140 -820))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 84 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 800 110))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 137 25))
+(open
+(extent 284 110))
+(terminals on)
+(pinCenter 620 120))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 63 45))
+(open
+(extent 254 82))
+(terminals on)
+(pinCenter 470 130))
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 39 16))
+(open
+(extent 69 31))
+(terminals on)
+(pinCenter 100 130))
+(devCarrierFor 23
+(active icon)
+(icon
+(extent 31 16))
+(open
+(extent 194 30))
+(pinCenter 350 180))
+(devCarrierFor 24
+(active icon)
+(icon
+(extent 83 16))
+(open
+(extent 110 31))
+(terminals on)
+(pinCenter 220 160))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 90 16))
+(open
+(extent 116 31))
+(terminals on)
+(pinCenter 220 130))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 95 16))
+(open
+(extent 121 31))
+(terminals on)
+(pinCenter 210 100))
+(devCarrierFor 27
+(active icon)
+(icon
+(extent 85 16))
+(open
+(extent 215 107))
+(pinCenter 140 -840))
+(devCarrierFor 28
+(active icon)
+(icon
+(extent 85 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 500 -870))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 39 16))
+(open
+(extent 69 31))
+(terminals on)
+(pinCenter 350 -870))
+(devCarrierFor 32
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 457 44)
+(editing enabled))
+(pinCenter 310 -960))
+(devCarrierFor 33
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 344 36)
+(editing enabled))
+(pinCenter 260 400))
+(devCarrierFor 34
+(active icon)
+(icon
+(extent 116 16))
+(open
+(extent 215 107))
+(pinCenter 140 -760))
+(devCarrierFor 35
+(active icon)
+(icon
+(extent 89 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -710))
+(devCarrierFor 36
+(active icon)
+(icon
+(extent 69 16))
+(open
+(extent 215 107))
+(pinCenter 150 -540))
+(devCarrierFor 37
+(active icon)
+(icon
+(extent 31 16))
+(open
+(extent 194 30))
+(pinCenter 300 -570))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 69 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 450 -570))
+(devCarrierFor 43
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 257 30)
+(editing enabled))
+(pinCenter 320 0))
+(devCarrierFor 44
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 365 97)
+(editing enabled))
+(pinCenter 300 600))
+(devCarrierFor 48
+(active icon)
+(icon
+(extent 143 16))
+(open
+(extent 604 26))
+(pinCenter 230 740))
+(devCarrierFor 51
+(active icon)
+(icon
+(extent 48 25))
+(open
+(extent 256 133))
+(terminals on)
+(pinCenter 910 750))
+(devCarrierFor 54
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 -40))
+(devCarrierFor 55
+(active icon)
+(icon
+(extent 119 14))
+(open
+(extent 215 107))
+(pinCenter 140 -800))
+(devCarrierFor 56
+(active icon)
+(icon
+(extent 32 16))
+(open
+(extent 215 107))
+(pinCenter 140 -680))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 32 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -670))
+(devCarrierFor 58
+(active icon)
+(icon
+(extent 92 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -750))
+(devCarrierFor 62
+(active icon)
+(icon
+(extent 35 16))
+(open
+(extent 215 107))
+(pinCenter 180 -330))
+(devCarrierFor 63
+(active icon)
+(icon
+(extent 36 16))
+(open
+(extent 215 107))
+(pinCenter 130 -330))
+(devCarrierFor 64
+(active icon)
+(icon
+(extent 69 16))
+(open
+(extent 208 117))
+(terminals on)
+(pinCenter 310 -310))
+(devCarrierFor 65
+(active icon)
+(icon
+(extent 35 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -340))
+(devCarrierFor 66
+(active icon)
+(icon
+(extent 36 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 440 -310))
+(devCarrierFor 72
+(active icon)
+(icon
+(extent 69 16))
+(open
+(extent 208 117))
+(terminals on)
+(pinCenter 310 -340))
+(devCarrierFor 87
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 195 103))
+(pinCenter 150 -520))
+(devCarrierFor 88
+(active icon)
+(icon
+(extent 58 15))
+(open
+(extent 85 51))
+(terminals on)
+(pinCenter 450 -540))
+(devCarrierFor 89
+(active icon)
+(icon
+(extent 146 16))
+(open
+(extent 215 107))
+(pinCenter 140 -740))
+(devCarrierFor 90
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 119 51))
+(terminals on)
+(pinCenter 440 -770))
+(devCarrierFor 91
+(active icon)
+(icon
+(extent 118 16))
+(open
+(extent 215 107))
+(pinCenter 140 -720))
+(devCarrierFor 92
+(active icon)
+(icon
+(extent 68 15))
+(open
+(extent 94 51))
+(terminals on)
+(pinCenter 440 -790))
+(devCarrierFor 93
+(active icon)
+(icon
+(extent 26 15))
+(open
+(extent 174 29))
+(pinCenter 300 -600))
+(devCarrierFor 95
+(active icon)
+(icon
+(extent 126 15))
+(open
+(extent 195 103))
+(pinCenter 150 -470))
+(devCarrierFor 96
+(active icon)
+(icon
+(extent 94 15))
+(open
+(extent 195 103))
+(pinCenter 150 -450))
+(devCarrierFor 97
+(active icon)
+(icon
+(extent 75 15))
+(open
+(extent 101 51))
+(terminals on)
+(pinCenter 450 -470))
+(devCarrierFor 98
+(active icon)
+(icon
+(extent 44 15))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 450 -450))
+(devCarrierFor 99
+(active icon)
+(icon
+(extent 31 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 330 -470))
+(devCarrierFor 100
+(active icon)
+(icon
+(extent 31 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 330 -450))
+(devCarrierFor 101
+(active icon)
+(icon
+(extent 143 15))
+(open
+(extent 195 103))
+(pinCenter 150 -400))
+(devCarrierFor 102
+(active icon)
+(icon
+(extent 92 15))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 450 -490))
+(devCarrierFor 103
+(active icon)
+(icon
+(extent 26 15))
+(open
+(extent 174 29))
+(pinCenter 350 -840))
+(devCarrierFor 104
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 78 51))
+(terminals on)
+(pinCenter 480 -840))
+(devCarrierFor 106
+(active icon)
+(icon
+(extent 110 15))
+(open
+(extent 195 103))
+(pinCenter 160 -240))
+(devCarrierFor 108
+(active icon)
+(icon
+(extent 59 15))
+(open
+(extent 86 51))
+(terminals on)
+(pinCenter 470 -230))
+(devCarrierFor 109
+(active icon)
+(icon
+(extent 125 15))
+(open
+(extent 195 103))
+(pinCenter 150 -380))
+(devCarrierFor 110
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 470 -380))
+(devCarrierFor 111
+(active icon)
+(icon
+(extent 26 15))
+(open
+(extent 174 29))
+(pinCenter 340 -380))
+(devCarrierFor 112
+(active icon)
+(icon
+(extent 31 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 340 -230))
+(devCarrierFor 113
+(active icon)
+(icon
+(extent 103 15))
+(open
+(extent 195 103))
+(pinCenter 160 -200))
+(devCarrierFor 114
+(active icon)
+(icon
+(extent 52 15))
+(open
+(extent 80 51))
+(terminals on)
+(pinCenter 470 -200))
+(devCarrierFor 115
+(active icon)
+(icon
+(extent 26 15))
+(open
+(extent 174 29))
+(pinCenter 340 -200))
+(devCarrierFor 118
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 78 51))
+(terminals on)
+(pinCenter 810 780))
+(devCarrierFor 119
+(active icon)
+(icon
+(extent 115 15))
+(open
+(extent 195 103))
+(pinCenter 160 -180))
+(devCarrierFor 120
+(active icon)
+(icon
+(extent 64 15))
+(open
+(extent 91 51))
+(terminals on)
+(pinCenter 470 -180))
+(devCarrierFor 121
+(active icon)
+(icon
+(extent 31 15))
+(open
+(extent 67 29)
+(showFormat int))
+(pinCenter 340 -180))
+(devCarrierFor 122
+(active icon)
+(icon
+(extent 102 15))
+(open
+(extent 195 103))
+(pinCenter 140 -640))
+(devCarrierFor 123
+(active icon)
+(icon
+(extent 51 15))
+(open
+(extent 79 51))
+(terminals on)
+(pinCenter 440 -810))
+(devCarrierFor 124
+(active icon)
+(icon
+(extent 114 15))
+(open
+(extent 195 103))
+(pinCenter 140 -620))
+(devCarrierFor 125
+(active icon)
+(icon
+(extent 63 15))
+(open
+(extent 90 51))
+(terminals on)
+(pinCenter 450 -510))
+(devCarrierFor 127
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 121 22))
+(pinCenter 820 850))
+(devCarrierFor 133
+(active open)
+(icon)
+(open
+(extent 174 167)
+(noformatter))
+(pinCenter 910 480))
+(devCarrierFor 134
+(active icon)
+(icon
+(extent 63 15))
+(open
+(extent 174 29))
+(pinCenter 230 480))
+(devCarrierFor 136
+(active icon)
+(icon
+(extent 69 16))
+(open
+(extent 208 117))
+(terminals on)
+(pinCenter 310 -540))
+(devCarrierFor 135
+(active icon)
+(icon
+(extent 83 16))
+(open
+(extent 194 30))
+(pinCenter 230 770))
+(devCarrierFor 139
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 234 126))
+(terminals on)
+(pinCenter 620 480))
+(devCarrierFor 140
+(active icon)
+(icon
+(extent 96 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 620 750))
+(devCarrierFor 141
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 620 270))
+(devCarrierFor 142
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 344 36)
+(editing enabled))
+(pinCenter 280 280))
+(devCarrierFor 144
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 620 850))
+(devCarrierFor 145
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 344 36)
+(editing enabled))
+(pinCenter 330 950))
+(devCarrierFor 146
+(active icon)
+(icon
+(extent 139 15))
+(open
+(extent 195 103))
+(pinCenter 150 -490))
+(devCarrierFor 147
+(active icon)
+(icon
+(extent 112 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter 450 -430))
+(devCarrierFor 148
+(active icon)
+(icon
+(extent 139 15))
+(open
+(extent 195 103))
+(pinCenter 150 -430))
+(devCarrierFor 149
+(active icon)
+(icon
+(extent 112 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter 450 -410))
+(devCarrierFor 150
+(active icon)
+(icon
+(extent 91 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 620 990))
+(devCarrierFor 151
+(active icon)
+(icon
+(extent 35 15))
+(open
+(extent 71 31))
+(pinCenter 620 950))
+(devCarrierFor 152
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 620 910))
+(connect D53:1 D0:1
+(points 2 315 -600 414 -600))
+(connect D8:1 D4:1
+(points 6 309 -700 340 -700 340 -670 360 -670 360 -650 406 -650))
+(connect D8:1 D6:1
+(points 6 309 -700 340 -700 340 -670 360 -670 360 -630 391 -630))
+(connect D8:1 D9:1
+(points 4 309 -700 340 -700 340 -690 402 -690))
+(connect D8:1 D10:1
+(points 4 309 -700 330 -700 330 -730 417 -730))
+(connect D15:1 D14:1
+(points 2 691 110 755 110))
+(connect D16:1 D15:1
+(points 4 504 130 520 130 520 120 549 120))
+(connect D21:1 D16:1
+(points 4 260 100 290 100 290 110 436 110))
+(connect D20:1 D16:2
+(points 4 267 130 280 130 280 120 436 120))
+(connect D19:1 D16:3
+(points 4 264 160 290 160 290 130 436 130))
+(connect D18:1 D16:4
+(points 4 368 180 390 180 390 140 436 140))
+(connect D36:0 D17:0
+(points 2 100 -27 100 119))
+(connect D17:1 D19:1
+(points 4 122 130 150 130 150 160 176 160))
+(connect D17:1 D20:1
+(points 2 122 130 172 130))
+(connect D17:1 D21:1
+(points 4 122 130 140 130 140 100 160 100))
+(connect D24:1 D23:1
+(points 2 372 -870 455 -870))
+(connect D8:1 D28:1
+(points 4 309 -700 340 -700 340 -710 393 -710))
+(connect D30:1 D31:1
+(points 2 318 -570 413 -570))
+(connect D87:1 D35:1
+(points 2 670 740 883 740))
+(connect D73:1 D35:2
+(points 4 837 780 860 780 860 760 883 760))
+(connect D8:1 D39:1
+(points 4 309 -700 340 -700 340 -670 421 -670))
+(connect D8:1 D40:1
+(points 4 309 -700 330 -700 330 -750 391 -750))
+(connect D46:1 D44:1
+(points 2 347 -340 420 -340))
+(connect D43:1 D45:1
+(points 2 347 -310 419 -310))
+(connect D84:1 D48:1
+(points 2 347 -540 418 -540))
+(connect D8:1 D50:1
+(points 4 309 -700 330 -700 330 -770 390 -770))
+(connect D8:1 D52:1
+(points 4 309 -700 330 -700 330 -790 403 -790))
+(connect D58:1 D56:1
+(points 2 348 -470 410 -470))
+(connect D59:1 D57:1
+(points 2 348 -450 425 -450))
+(connect D58:1 D61:1
+(points 4 348 -470 370 -470 370 -490 401 -490))
+(connect D62:1 D63:1
+(points 2 365 -840 452 -840))
+(connect D69:1 D65:1
+(points 2 358 -230 438 -230))
+(connect D68:1 D67:1
+(points 2 355 -380 430 -380))
+(connect D72:1 D71:1
+(points 2 355 -200 441 -200))
+(connect D87:1 D73:0
+(points 3 670 740 810 740 810 770))
+(connect D76:1 D75:1
+(points 2 358 -180 435 -180))
+(connect D8:1 D78:1
+(points 4 309 -700 330 -700 330 -810 412 -810))
+(connect D58:1 D80:1
+(points 4 348 -470 370 -470 370 -510 416 -510))
+(connect D87:2 D81:1
+(points 4 670 760 690 760 690 850 775 850))
+(connect D86:1 D82:1
+(points 2 671 480 820 480))
+(connect D88:0 D86:0
+(points 2 620 298 620 452))
+(connect D2:1 D86:1
+(points 6 266 450 280 450 280 440 360 440 360 470 569 470))
+(connect D83:1 D86:2
+(points 6 264 480 280 480 280 450 350 450 350 480 569 480))
+(connect D3:1 D86:3
+(points 4 275 510 300 510 300 490 569 490))
+(connect D86:0 D87:0
+(points 2 620 508 620 722))
+(connect D34:1 D87:1
+(points 2 304 740 569 740))
+(connect D85:1 D87:2
+(points 4 274 770 320 770 320 760 569 760))
+(connect D15:0 D88:0
+(points 2 620 135 620 242))
+(connect D87:0 D90:0
+(points 2 620 778 620 840))
+(connect D59:1 D93:1
+(points 4 348 -450 370 -450 370 -430 391 -430))
+(connect D59:1 D95:1
+(points 4 348 -450 370 -450 370 -410 391 -410))
+(connect D97:0 D96:0
+(points 2 620 960 620 980))
+(connect D98:0 D97:0
+(points 2 620 920 620 940))
+(connect D90:0 D98:0
+(points 2 620 860 620 900)))
+(stackingOrder 12 6 4 39 9 10 0 13 45 31 40 28 42 41 29 7 27 19 20 21 17 36 32
+49 51 24 23 50 52 37 1 11 38 5 54 56 57 61 14 63 62 53 69 65 71 72 70 64 74 75
+76 78 25 77 79 18 33 16 15 82 47 46 44 43 30 48 84 80 22 34 85 73 35 83 26 87 81
+88 89 91 2 86 3 8 92 93 55 66 60 94 58 59 95 67 68 98 90 97 96))))
+(device 111 START25)
+(device 162 LABEL
+(properties
+(name
+"          Sample ID         Date          Time       Int CO2   Avg Peak  Max Peak    Start     End     xH2O     Temp   Pres  Error"
+)
+(labelValue
+"          Sample ID         Date          Time       Int CO2   Avg Peak  Max Peak    Start     End     xH2O     Temp   Pres  Error"
+))
+(implementation))
+(device 208 FROMGLOBAL
+(properties
+(name "GetDataFileName")
+(globalName "DataFile"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 209 TEXTDISPLAY
+(properties
+(name "Data File"))
+(interface
+(input 1
+(name "Data"))))
+(device 210 LABEL
+(properties
+(name "Data File")
+(labelValue "Data File"))
+(implementation))
+(device 215 CONTEXT
+(properties
+(name "RunTCO2Sample")
+(trigMode deg)
+(nextID 342)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 FORMULA
+(properties
+(name "now()")
+(expr 1 "now()"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 2 TOGLOBAL
+(properties
+(name "SampleTime")
+(globalName "SampleTime"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 3 FORMULA
+(properties
+(name "SequenceTime")
+(expr 3 "intPart(A-SampleTime)" "" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 7 IFTHENELSE
+(properties
+(name "1")
+(cases 1 "a==1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 8 ONCYCLE
+(properties
+(cycle 1))
+(interface
+(output 1
+(name "Alarm")
+(lock name constraints))))
+(device 30 TEXTDISPLAY
+(interface
+(input 1
+(name "Data"))))
+(device 42 IFTHENELSE
+(properties
+(name "26")
+(cases 1 "a==26"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 52 IFTHENELSE
+(properties
+(name "74")
+(cases 1 "a==74"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 57 IFTHENELSE
+(properties
+(name "161")
+(cases 1 "a==161"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 64 IFTHENELSE
+(properties
+(name "170")
+(cases 1 "a>=170"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 65 BREAK)
+(device 79 IFTHENELSE
+(properties
+(name "159")
+(cases 1 "a==159"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 89 IFTHENELSE
+(properties
+(name "160")
+(cases 1 "a==160"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 92 CALL
+(properties
+(name "Call Plot")
+(callFunc "Plot")
+(parmMode rev30)))
+(device 98 IFTHENELSE
+(properties
+(name "162")
+(cases 1 "a==162"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 102 CALL
+(properties
+(name "Call SaveData")
+(callFunc "SaveData")
+(parmMode rev30)))
+(device 107 FORCOUNT
+(properties
+(count 2))
+(interface
+(input 1
+(name "Count")
+(tag "Count")
+(requires
+(datatype Int32)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Count")
+(lock name constraints))))
+(device 132 FROMGLOBAL
+(properties
+(name "Repeat")
+(globalName "Repeat"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 133 CALL
+(properties
+(name "Call SampleSetUp")
+(callFunc "SampleSetUp")
+(parmMode rev30)))
+(device 146 TOGLOBAL
+(properties
+(name "SequenceTime")
+(globalName "SequenceTime"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 188 CONTEXT
+(properties
+(name "PumpAcid")
+(trigMode deg)
+(nextID 28)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 22 IODEVICE
+(properties
+(name "Serial12 ( @ 12)")
+(transactions 8 "WRITE BYTE 254" "WRITE BYTE 9" "WAIT INTERVAL:.5"
+"EXECUTE RESET" "WRITE BYTE 254" "WRITE BYTE 1" "WAIT INTERVAL:.5"
+"EXECUTE RESET"))
+(implementation
+(iopath "Serial12")))
+(device 26 FORCOUNT
+(properties
+(count 2))
+(interface
+(output 1
+(name "Count")
+(lock name constraints))))
+(device 27 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Give on shot of acid\\par\r\n}\r\n"
+)))
+(configuration
+(connect D1:1 D0:0)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt 35 3)
+(configuration
+(devCarrierFor 22
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 224 236))
+(terminals on)
+(pinCenter 520 580))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open
+(extent 95 31))
+(pinCenter 440 470))
+(devCarrierFor 27
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 144 36)
+(editing enabled))
+(pinCenter 660 590))
+(connect D1:1 D0:0
+(points 3 476 470 520 470 520 552)))
+(stackingOrder 2 0 1))))
+(device 189 CONTEXT
+(properties
+(name "Rinse_GetSample")
+(trigMode deg)
+(nextID 46)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 1 FROMGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 4 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 5 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 8 LITERALCONSTANT
+(properties
+(name "RinseStandard"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o-8V3000a12000o1V10000a100o-8V3000a12000o1V10000a100o-8V3000a12000o1V10000a100o-8V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 9 LITERALCONSTANT
+(properties
+(name "RinseSample (B)"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o2V3000a12000o-1V10000a100o2V3000a12000o-1V10000a100o2V3000a12000o-1V10000a100o2V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 10 FROMGLOBAL
+(properties
+(name "SampleType")
+(globalName "SampleType"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 11 IFTHENELSE
+(properties
+(cases 1 "0==a"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 21 CALL
+(properties
+(name "Call ErrorRecord")
+(callFunc "ErrorRecord")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 26 IODEVICE
+(properties
+(name "Serial10 ( @ 10)")
+(transactions 1 "WRITE TEXT a STR EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(iopath "Serial10")))
+(device 29 CALL
+(properties
+(name "Call Open_Dump")
+(callFunc "Open_Dump")
+(parmMode rev30)))
+(device 30 CALL
+(properties
+(name "Call Full_Flow")
+(callFunc "Full_Flow")
+(parmMode rev30)))
+(device 33 IFTHENELSE
+(properties
+(cases 6 "a==1" "a==2" "a==3" "a==4" "a==5" "a==6"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else If")
+(lock name constraints))
+(output 3
+(name "Else If")
+(lock name constraints))
+(output 4
+(name "Else If")
+(lock name constraints))
+(output 5
+(name "Else If")
+(lock name constraints))
+(output 6
+(name "Else If")
+(lock name constraints))
+(output 7
+(name "Else")
+(lock name constraints))))
+(device 34 FROMGLOBAL
+(properties
+(name "Get Valve_Position")
+(globalName "Valve_Position"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 35 LITERALCONSTANT
+(properties
+(name "RinseSample (C)"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o3V3000a12000o-1V10000a100o3V3000a12000o-1V10000a100o3V3000a12000o-1V10000a100o3V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 36 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 37 LITERALCONSTANT
+(properties
+(name "RinseSample (D)"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o4V3000a12000o-1V10000a100o4V3000a12000o-1V10000a100o4V3000a12000o-1V10000a100o4V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 38 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 40 LITERALCONSTANT
+(properties
+(name "RinseSample (E)"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o5V3000a12000o-1V10000a100o5V3000a12000o-1V10000a100o5V3000a12000o-1V10000a100o5V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 41 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 42 LITERALCONSTANT
+(properties
+(name "RinseSample (E)"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o6V3000a12000o-1V10000a100o6V3000a12000o-1V10000a100o6V3000a12000o-1V10000a100o6V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 43 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 44 LITERALCONSTANT
+(properties
+(name "RinseSample (E)"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data 
+"/1o7V3000a12000o-1V10000a100o7V3000a12000o-1V10000a100o7V3000a12000o-1V10000a100o7V2000a35000m0R"
+))
+(initValue Text
+(data  ""))))
+(device 45 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(configuration
+(connect D6:0 D0:0)
+(connect D3:1 D1:1)
+(connect D4:1 D2:1)
+(connect D6:1 D3:0)
+(connect D11:1 D4:0)
+(connect D5:1 D6:1)
+(connect D8:1 D7:1)
+(connect D10:0 D8:0)
+(connect D0:1 D8:1)
+(connect D6:0 D9:0)
+(connect D9:0 D10:0)
+(connect D6:2 D11:0)
+(connect D12:1 D11:1)
+(connect D6:2 D12:0)
+(connect D11:2 D13:0)
+(connect D13:1 D14:1)
+(connect D11:3 D15:0)
+(connect D15:1 D16:1)
+(connect D11:4 D17:0)
+(connect D17:1 D18:1)
+(connect D11:5 D19:0)
+(connect D19:1 D20:1)
+(connect D11:6 D21:0)
+(connect D21:1 D22:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt -70 8)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 240 470))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 620 70))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 930 170))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 91 15))
+(open
+(extent 675 27))
+(pinCenter 500 70))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 734 26))
+(pinCenter 810 170))
+(devCarrierFor 10
+(active icon)
+(icon
+(extent 75 15))
+(open
+(extent 101 51))
+(terminals on)
+(pinCenter 200 270))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 71 34))
+(open
+(extent 60 62))
+(terminals on)
+(pinCenter 300 270))
+(devCarrierFor 21
+(active icon)
+(icon
+(extent 101 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 520 470))
+(devCarrierFor 26
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 370 470))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 105 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 370 370))
+(devCarrierFor 30
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 370 410))
+(devCarrierFor 33
+(active open)
+(icon)
+(open
+(extent 60 142))
+(terminals on)
+(pinCenter 600 260))
+(devCarrierFor 34
+(active icon)
+(icon
+(extent 113 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter 460 260))
+(devCarrierFor 35
+(active icon)
+(icon
+(extent 105 15))
+(open
+(extent 675 27))
+(pinCenter 810 230))
+(devCarrierFor 36
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 930 230))
+(devCarrierFor 37
+(active icon)
+(icon
+(extent 105 15))
+(open
+(extent 675 27))
+(pinCenter 810 290))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 930 290))
+(devCarrierFor 40
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 675 27))
+(pinCenter 810 360))
+(devCarrierFor 41
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 930 360))
+(devCarrierFor 42
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 675 27))
+(pinCenter 810 420))
+(devCarrierFor 43
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 930 420))
+(devCarrierFor 44
+(active icon)
+(icon
+(extent 104 15))
+(open
+(extent 734 26))
+(pinCenter 810 480))
+(devCarrierFor 45
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 930 480))
+(connect D6:0 D0:0
+(points 4 300 289 300 320 240 320 240 460))
+(connect D3:1 D1:1
+(points 2 548 70 580 70))
+(connect D4:1 D2:1
+(points 2 864 170 890 170))
+(connect D6:1 D3:0
+(points 5 338 260 350 260 350 40 500 40 500 60))
+(connect D11:1 D4:0
+(points 5 682 200 690 200 690 140 810 140 810 160))
+(connect D5:1 D6:1
+(points 2 240 270 262 270))
+(connect D8:1 D7:1
+(points 2 421 470 467 470))
+(connect D10:0 D8:0
+(points 2 370 420 370 442))
+(connect D0:1 D8:1
+(points 2 279 470 319 470))
+(connect D6:0 D9:0
+(points 4 300 289 300 310 370 310 370 360))
+(connect D9:0 D10:0
+(points 2 370 380 370 400))
+(connect D6:2 D11:0
+(points 7 338 280 360 280 360 230 460 230 460 150 610 150 610 168))
+(connect D12:1 D11:1
+(points 2 519 260 537 260))
+(connect D6:2 D12:0
+(points 5 338 280 360 280 360 230 460 230 460 250))
+(connect D11:2 D13:0
+(points 5 682 220 700 220 700 200 810 200 810 220))
+(connect D13:1 D14:1
+(points 2 865 230 890 230))
+(connect D11:3 D15:0
+(points 5 682 240 730 240 730 260 810 260 810 280))
+(connect D15:1 D16:1
+(points 2 865 290 890 290))
+(connect D11:4 D17:0
+(points 5 682 260 720 260 720 320 810 320 810 350))
+(connect D17:1 D18:1
+(points 2 864 360 890 360))
+(connect D11:5 D19:0
+(points 5 682 280 710 280 710 390 810 390 810 410))
+(connect D19:1 D20:1
+(points 2 864 420 890 420))
+(connect D11:6 D21:0
+(points 5 682 300 700 300 700 450 810 450 810 470))
+(connect D21:1 D22:1
+(points 2 864 480 890 480)))
+(stackingOrder 5 0 7 9 10 1 11 12 13 15 19 8 21 3 14 16 18 20 22 4 2 6 17))))
+(device 195 IFTHENELSE
+(properties
+(name "24")
+(cases 1 "a==24"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 196 CONTEXT
+(properties
+(name "Inject")
+(trigMode deg)
+(nextID 22)
+(popupTitleText "UserObject")
+(popupMoveable 1))
+(deviceList
+(device 0 LITERALCONSTANT
+(properties
+(name "InjectSample"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "/1o-1V1000a0m0R"))
+(initValue Text
+(data  ""))))
+(device 1 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 2 FROMGLOBAL
+(properties
+(name "SampleType")
+(globalName "SampleType"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 3 LITERALCONSTANT
+(properties
+(name "InjectStandard"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "/1o1V1000a0m0R"))
+(initValue Text
+(data  ""))))
+(device 4 TOGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 5 IFTHENELSE
+(properties
+(cases 1 "0==a"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 11 FROMGLOBAL
+(properties
+(name "SyringeCom")
+(globalName "SyringeCom"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 19 IODEVICE
+(properties
+(name "Serial10 ( @ 10)")
+(transactions 1 "WRITE TEXT a EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(iopath "Serial10")))
+(device 18 CALL
+(properties
+(name "Call ErrorRecord")
+(callFunc "ErrorRecord")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 21 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\r\n{\\colortbl ;\\red0\\green0\\blue0;}\r\n\\viewkind4\\uc1\\pard\\cf1\\f0\\fs24 Standard is in position 8; rotate valve clockwise and inject.\\par\r\nRotate counterclockwise and inject for any other sample.\\par\r\n}\r\n"
+)))
+(configuration
+(connect D5:2 D0:0)
+(connect D0:1 D1:1)
+(connect D5:1 D3:0)
+(connect D3:1 D4:1)
+(connect D2:1 D5:1)
+(connect D5:0 D6:0)
+(connect D5:0 D7:0)
+(connect D6:1 D7:1)
+(connect D7:1 D8:1)))
+(contextCarrier
+(active detail)
+(detail
+(extent 350 300)
+(anchorPt -2 -88)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 79 15))
+(open
+(extent 675 27))
+(pinCenter 520 360))
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 630 360))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 75 15))
+(open
+(extent 101 51))
+(terminals on)
+(pinCenter 220 310))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 86 15))
+(open
+(extent 675 27))
+(pinCenter 520 290))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 630 290))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 71 34))
+(open
+(extent 60 62))
+(terminals on)
+(pinCenter 370 310))
+(devCarrierFor 11
+(active icon)
+(icon
+(extent 74 15))
+(open
+(extent 100 51))
+(terminals on)
+(pinCenter 250 600))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 97 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 400 600))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 101 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 560 600))
+(devCarrierFor 21
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 414 86)
+(editing enabled))
+(pinCenter 500 180))
+(connect D5:2 D0:0
+(points 3 408 320 520 320 520 350))
+(connect D0:1 D1:1
+(points 2 562 360 590 360))
+(connect D5:1 D3:0
+(points 5 408 300 430 300 430 260 520 260 520 280))
+(connect D3:1 D4:1
+(points 2 565 290 590 290))
+(connect D2:1 D5:1
+(points 2 260 310 332 310))
+(connect D5:0 D6:0
+(points 4 370 329 370 360 250 360 250 590))
+(connect D5:0 D7:0
+(points 4 370 329 370 360 400 360 400 572))
+(connect D6:1 D7:1
+(points 2 289 600 349 600))
+(connect D7:1 D8:1
+(points 2 451 600 507 600)))
+(stackingOrder 8 2 6 5 9 3 4 1 7 0))))
+(device 198 TOGLOBAL
+(properties
+(name "pCO2_integrate")
+(globalName "pCO2_integrate"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 199 CONSTANT
+(properties
+(name "Real64"))
+(interface
+(output 1
+(name "Real64")
+(lock name constraints)))
+(implementation
+(value Real
+(data  0))
+(initValue Real
+(data  0))))
+(device 200 TOGLOBAL
+(properties
+(name "pCO2_max")
+(globalName "pCO2_max"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 201 TOGLOBAL
+(properties
+(name "pCO2_start")
+(globalName "pCO2_start"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 202 TOGLOBAL
+(properties
+(name "pCO2_end")
+(globalName "pCO2_end"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 203 TOGLOBAL
+(properties
+(name "pCO2")
+(globalName "pCO2"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 235 IFTHENELSE
+(properties
+(name "75")
+(cases 1 "a==75"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 238 CALL
+(properties
+(name "Call ErrorRecord")
+(callFunc "ErrorRecord")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 299 IFTHENELSE
+(properties
+(name "60")
+(cases 1 "a==60"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 316 CALL
+(properties
+(name "Call Get_LicorData")
+(callFunc "Get_LicorData")
+(parmMode rev30)))
+(device 317 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "(Integral(State On))"))
+(initValue Text
+(data  ""))))
+(device 318 LITERALCONSTANT
+(properties
+(name "Text"))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "(Integral(State Off))"))
+(initValue Text
+(data  ""))))
+(device 319 CALL
+(properties
+(name "Call ErrorRecord")
+(callFunc "ErrorRecord")
+(parmMode rev30))
+(interface
+(input 1
+(name "A")
+(optional yes))))
+(device 323 IODEVICE
+(properties
+(name "serial11 ( @ 11)")
+(transactions 1 "WRITE TEXT a STR EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(iopath "serial11")))
+(device 324 IODEVICE
+(properties
+(name "serial11 ( @ 11)")
+(transactions 1 "WRITE TEXT a STR EOL"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(type exception)
+(name "Error")
+(lock name constraints)
+(optional yes)))
+(implementation
+(iopath "serial11")))
+(device 330 CALL
+(properties
+(name "Call Open_Dump")
+(callFunc "Open_Dump")
+(parmMode rev30)))
+(device 331 CALL
+(properties
+(name "Call Normal_Flow")
+(callFunc "Normal_Flow")
+(parmMode rev30)))
+(device 332 CALL
+(properties
+(name "Call Close_Dump")
+(callFunc "Close_Dump")
+(parmMode rev30)))
+(device 333 CALL
+(properties
+(name "Call Close_Dump")
+(callFunc "Close_Dump")
+(parmMode rev30)))
+(device 335 CALL
+(properties
+(name "Call Full_Flow")
+(callFunc "Full_Flow")
+(parmMode rev30)))
+(device 336 FORRANGE
+(properties
+(from 1)
+(thru 2)
+(step 1))
+(interface
+(input 1
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 337 FROMGLOBAL
+(properties
+(name "Get SampleCount")
+(globalName "SampleCount"))
+(interface
+(output 1
+(name "Data")
+(tag "Data")
+(lock name constraints))))
+(device 338 TOGLOBAL
+(properties
+(name "Set Valve_Position")
+(globalName "Valve_Position"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 339 CALL
+(properties
+(name "Call Stop_Flow")
+(callFunc "Stop_Flow")
+(parmMode rev30)))
+(device 340 TOGLOBAL
+(properties
+(name "Set CurrentRepeat")
+(globalName "CurrentRepeat"))
+(interface
+(input 1
+(name "Data")
+(tag "Data"))))
+(device 341 FORMULA
+(properties
+(expr 1 "A+1"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D16:1 D0:0)
+(connect D0:1 D1:1)
+(connect D4:1 D2:1)
+(connect D2:1 D3:1)
+(connect D0:0 D4:0)
+(connect D2:1 D5:1)
+(connect D2:1 D6:1)
+(connect D2:1 D7:1)
+(connect D2:1 D8:1)
+(connect D2:1 D9:1)
+(connect D42:0 D10:0)
+(connect D2:1 D11:1)
+(connect D2:1 D12:1)
+(connect D2:1 D13:0)
+(connect D2:1 D14:1)
+(connect D8:1 D15:0)
+(connect D44:1 D16:0)
+(connect D17:1 D16:1)
+(connect D2:1 D19:0)
+(connect D2:1 D19:1)
+(connect D6:1 D20:0)
+(connect D3:1 D21:0)
+(connect D2:1 D22:1)
+(connect D7:1 D23:0)
+(connect D25:1 D24:1)
+(connect D16:1 D25:0)
+(connect D25:1 D26:1)
+(connect D25:1 D27:1)
+(connect D25:1 D28:1)
+(connect D25:1 D29:1)
+(connect D2:1 D30:1)
+(connect D37:1 D31:1)
+(connect D2:1 D32:1)
+(connect D2:0 D33:0)
+(connect D38:1 D36:1)
+(connect D30:1 D37:0)
+(connect D34:1 D37:1)
+(connect D11:1 D38:0)
+(connect D35:1 D38:1)
+(connect D12:1 D39:0)
+(connect D32:1 D40:0)
+(connect D22:1 D41:0)
+(connect D9:1 D42:0)
+(connect D39:0 D43:0)
+(connect D18:0 D44:0)
+(connect D45:1 D44:1)
+(connect D18:0 D45:0)
+(connect D44:1 D46:1)
+(connect D44:0 D47:0)
+(connect D49:1 D48:1)
+(connect D16:1 D49:1)))
+(contextCarrier
+(wndOrigin 82 82)
+(wndState res)
+(active detail)
+(panel
+(extent 430 404)
+(drawGrid "off")
+(widget 5 detail
+(relativeOrigin 270 50)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 0)
+(title on)
+(tabStop off)
+(tabIndex 0)
+(borderStyle flat)
+(extent 121 22))
+(panelBg "Light Blue Gray"))
+(detail
+(extent 665 304)
+(anchorPt 463 298)
+(configuration
+(devCarrierFor 0
+(active icon)
+(icon
+(extent 55 14))
+(open
+(extent 71 31))
+(terminals on)
+(pinCenter 70 -10))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 78 15))
+(open
+(extent 103 51))
+(terminals on)
+(pinCenter 160 -10))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 85 14))
+(open
+(extent 145 87))
+(terminals on)
+(pinCenter 180 130))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 24 25))
+(open
+(extent 58 51))
+(terminals on)
+(pinCenter 340 130))
+(devCarrierFor 8
+(active open)
+(icon
+(iconImage "loop.icn"))
+(open
+(extent 89 31))
+(pinCenter 70 130))
+(devCarrierFor 30
+(active open)
+(icon)
+(open
+(extent 121 22))
+(pinCenter 360 -20))
+(devCarrierFor 42
+(active icon)
+(icon
+(extent 24 25))
+(open
+(extent 65 51))
+(terminals on)
+(pinCenter 340 290))
+(devCarrierFor 52
+(active icon)
+(icon
+(extent 24 25))
+(open
+(extent 65 51))
+(terminals on)
+(pinCenter 340 460))
+(devCarrierFor 57
+(active icon)
+(icon
+(extent 25 25))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 300 1350))
+(devCarrierFor 64
+(active icon)
+(icon
+(extent 25 25))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 290 1680))
+(devCarrierFor 65
+(active icon)
+(icon
+(extent 36 15))
+(open)
+(terminals on)
+(pinCenter 460 1750))
+(devCarrierFor 79
+(active icon)
+(icon
+(extent 25 25))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 290 1100))
+(devCarrierFor 89
+(active icon)
+(icon
+(extent 25 25))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 300 1210))
+(devCarrierFor 92
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 160 210))
+(devCarrierFor 98
+(active icon)
+(icon
+(extent 25 25))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter 290 1610))
+(devCarrierFor 102
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 176 51))
+(terminals on)
+(title off)
+(pinCenter 410 1380))
+(devCarrierFor 107
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open
+(extent 95 31))
+(pinCenter -100 -100))
+(devCarrierFor 132
+(active icon)
+(icon
+(extent 44 15))
+(open
+(extent 72 51))
+(terminals on)
+(pinCenter -190 -100))
+(devCarrierFor 133
+(active icon)
+(icon
+(extent 112 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter -200 -350))
+(devCarrierFor 146
+(active icon)
+(icon
+(extent 92 15))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 340 50))
+(devCarrierFor 188
+(active icon)
+(icon
+(extent 61 15))
+(terminals on)
+(pinCenter 430 310))
+(devCarrierFor 189
+(active icon)
+(icon
+(extent 112 15))
+(terminals on)
+(pinCenter 500 150))
+(devCarrierFor 195
+(active icon)
+(icon
+(extent 24 25))
+(open
+(extent 65 51))
+(terminals on)
+(pinCenter 340 220))
+(devCarrierFor 196
+(active icon)
+(icon
+(extent 33 15))
+(terminals on)
+(pinCenter 440 480))
+(devCarrierFor 198
+(active icon)
+(icon
+(extent 95 15))
+(open
+(extent 119 51))
+(terminals on)
+(pinCenter 150 -150))
+(devCarrierFor 199
+(active icon)
+(icon
+(extent 44 15))
+(open
+(extent 80 29)
+(showFormat real))
+(pinCenter 50 -110))
+(devCarrierFor 200
+(active icon)
+(icon
+(extent 68 15))
+(open
+(extent 94 51))
+(terminals on)
+(pinCenter 140 -90))
+(devCarrierFor 201
+(active icon)
+(icon
+(extent 69 15))
+(open
+(extent 95 51))
+(terminals on)
+(pinCenter 140 -130))
+(devCarrierFor 202
+(active icon)
+(icon
+(extent 66 15))
+(open
+(extent 92 51))
+(terminals on)
+(pinCenter 140 -110))
+(devCarrierFor 203
+(active icon)
+(icon
+(extent 36 15))
+(open
+(extent 64 51))
+(terminals on)
+(pinCenter 120 -70))
+(devCarrierFor 235
+(active icon)
+(icon
+(extent 24 25))
+(open
+(extent 65 51))
+(terminals on)
+(pinCenter 340 530))
+(devCarrierFor 238
+(active icon)
+(icon
+(extent 101 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 710 580))
+(devCarrierFor 299
+(active icon)
+(icon
+(extent 24 25))
+(open
+(extent 65 51))
+(terminals on)
+(pinCenter 340 350))
+(devCarrierFor 316
+(active icon)
+(icon
+(extent 114 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 40 210))
+(devCarrierFor 317
+(active icon)
+(icon
+(extent 26 15))
+(open
+(extent 174 29))
+(pinCenter 440 580))
+(devCarrierFor 318
+(active icon)
+(icon
+(extent 26 15))
+(open
+(extent 174 29))
+(pinCenter 450 1150))
+(devCarrierFor 319
+(active icon)
+(icon
+(extent 101 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 700 1150))
+(devCarrierFor 323
+(active icon)
+(icon
+(extent 96 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 550 580))
+(devCarrierFor 324
+(active icon)
+(icon
+(extent 96 51)
+(iconImage "io.icn"))
+(open
+(extent 229 74))
+(terminals on)
+(pinCenter 550 1150))
+(devCarrierFor 330
+(active icon)
+(icon
+(extent 105 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 410 1230))
+(devCarrierFor 331
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 470 380))
+(devCarrierFor 332
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 470 250))
+(devCarrierFor 333
+(active icon)
+(icon
+(extent 108 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 460 1700))
+(devCarrierFor 335
+(active icon)
+(icon
+(extent 85 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter 410 1260))
+(devCarrierFor 336
+(active icon)
+(icon
+(extent 68 51)
+(iconImage "loop.icn"))
+(open
+(extent 99 79))
+(pinCenter -200 -290))
+(devCarrierFor 337
+(active icon)
+(icon
+(extent 107 15))
+(open
+(extent 108 51))
+(terminals on)
+(pinCenter -320 -290))
+(devCarrierFor 338
+(active icon)
+(icon
+(extent 112 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter -20 -310))
+(devCarrierFor 339
+(active icon)
+(icon
+(extent 91 15))
+(open
+(extent 176 51))
+(terminals on)
+(pinCenter -200 -210))
+(devCarrierFor 340
+(active icon)
+(icon
+(extent 112 15))
+(open
+(extent 113 51))
+(terminals on)
+(pinCenter 150 -180))
+(devCarrierFor 341
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 50 -180))
+(connect D16:1 D0:0
+(points 5 -64 -100 -30 -100 -30 -80 70 -80 70 -20))
+(connect D0:1 D1:1
+(points 2 100 -10 118 -10))
+(connect D4:1 D2:1
+(points 2 117 130 135 130))
+(connect D2:1 D3:1
+(points 2 225 130 325 130))
+(connect D0:0 D4:0
+(points 2 70 -1 70 94))
+(connect D2:1 D5:1
+(points 6 225 130 260 130 260 50 270 50 270 -20 297 -20))
+(connect D2:1 D6:1
+(points 4 225 130 250 130 250 290 325 290))
+(connect D2:1 D7:1
+(points 4 225 130 250 130 250 460 325 460))
+(connect D2:1 D8:1
+(points 4 225 130 250 130 250 1350 285 1350))
+(connect D2:1 D9:1
+(points 4 225 130 250 130 250 1680 275 1680))
+(connect D42:0 D10:0
+(points 2 460 1710 460 1740))
+(connect D2:1 D11:1
+(points 4 225 130 250 130 250 1100 275 1100))
+(connect D2:1 D12:1
+(points 4 225 130 250 130 250 1210 285 1210))
+(connect D2:1 D13:0
+(points 5 225 130 250 130 250 170 160 170 160 200))
+(connect D2:1 D14:1
+(points 4 225 130 250 130 250 1610 275 1610))
+(connect D8:1 D15:0
+(points 3 315 1340 410 1340 410 1370))
+(connect D44:1 D16:0
+(points 3 -164 -290 -100 -290 -100 -128))
+(connect D17:1 D16:1
+(points 2 -166 -100 -137 -100))
+(connect D2:1 D19:0
+(points 7 225 130 260 130 260 50 270 50 270 20 340 20 340 40))
+(connect D2:1 D19:1
+(points 4 225 130 260 130 260 50 291 50))
+(connect D6:1 D20:0
+(points 3 354 280 430 280 430 300))
+(connect D3:1 D21:0
+(points 3 354 120 500 120 500 140))
+(connect D2:1 D22:1
+(points 4 225 130 250 130 250 220 325 220))
+(connect D7:1 D23:0
+(points 3 354 450 440 450 440 470))
+(connect D25:1 D24:1
+(points 4 74 -110 80 -110 80 -150 100 -150))
+(connect D16:1 D25:0
+(points 5 -64 -100 -40 -100 -40 -140 50 -140 50 -120))
+(connect D25:1 D26:1
+(points 4 74 -110 80 -110 80 -90 103 -90))
+(connect D25:1 D27:1
+(points 4 74 -110 80 -110 80 -130 103 -130))
+(connect D25:1 D28:1
+(points 2 74 -110 104 -110))
+(connect D25:1 D29:1
+(points 4 74 -110 80 -110 80 -70 99 -70))
+(connect D2:1 D30:1
+(points 4 225 130 250 130 250 530 325 530))
+(connect D37:1 D31:1
+(points 2 600 580 657 580))
+(connect D2:1 D32:1
+(points 4 225 130 250 130 250 350 325 350))
+(connect D2:0 D33:0
+(points 6 180 139 180 160 150 160 150 170 40 170 40 200))
+(connect D38:1 D36:1
+(points 2 600 1150 647 1150))
+(connect D30:1 D37:0
+(points 3 354 520 550 520 550 552))
+(connect D34:1 D37:1
+(points 2 455 580 499 580))
+(connect D11:1 D38:0
+(points 3 305 1090 550 1090 550 1122))
+(connect D35:1 D38:1
+(points 2 465 1150 499 1150))
+(connect D12:1 D39:0
+(points 3 315 1200 410 1200 410 1220))
+(connect D32:1 D40:0
+(points 3 354 340 470 340 470 370))
+(connect D22:1 D41:0
+(points 3 354 210 470 210 470 240))
+(connect D9:1 D42:0
+(points 3 305 1670 460 1670 460 1690))
+(connect D39:0 D43:0
+(points 2 410 1240 410 1250))
+(connect D18:0 D44:0
+(points 2 -200 -340 -200 -318))
+(connect D45:1 D44:1
+(points 2 -264 -290 -237 -290))
+(connect D18:0 D45:0
+(points 6 -200 -340 -200 -330 -250 -330 -250 -320 -320 -320 -320 -300))
+(connect D44:1 D46:1
+(points 4 -164 -290 -140 -290 -140 -310 -79 -310))
+(connect D44:0 D47:0
+(points 2 -200 -262 -200 -220))
+(connect D49:1 D48:1
+(points 2 77 -180 91 -180))
+(connect D16:1 D49:1
+(points 6 -64 -100 -40 -100 -40 -140 -10 -140 -10 -180 22 -180)))
+(stackingOrder 4 14 26 24 27 28 6 5 3 29 25 9 8 12 22 30 0 1 19 2 7 32 31 36 11
+38 35 23 40 41 42 10 39 43 15 21 20 47 37 34 33 45 17 46 44 13 18 48 16 49))))
+(device 217 FORMULA
+(properties
+(name "ShowPanel(\"Plot\")")
+(expr 1 "ShowPanel(\"Plot\", 0, 0, 880, 340)"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 218 FORMULA
+(properties
+(name "ShowPanel(\"SaveData\")")
+(expr 1 "ShowPanel(\"SaveData\", 0, 400)"))
+(interface
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 221 NOTE
+(properties
+(text2 1
+"{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}\r\n\\viewkind4\\uc1\\pard\\fs18                                                                                        -----------------------  CO2 Peak -----------------------\\par\r\n           Sample ID          Date               Time             Area       Average   Maximum      Start           End         Water       Temp.       Press.          Error\\par\r\n}\r\n"
+)))
+(configuration
+(connect D4:0 D0:0)
+(connect D9:0 D1:0)
+(connect D1:0 D4:0)
+(connect D4:1 D5:1)
+(connect D5:0 D6:0)
+(connect D0:1 D7:0)
+(connect D2:0 D8:0)
+(connect D8:0 D9:0))
+(ShowOnExecPanel))
+(contextCarrier
+(wndOrigin 62 62)
+(wndState res)
+(active detail)
+(panel
+(extent 841 644)
+(drawGrid "off")
+(widget 6 detail
+(relativeOrigin 10 600)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 0)
+(title off)
+(tabStop off)
+(tabIndex 1)
+(borderStyle none)
+(extent 70 25)
+(just l))
+(widget 5 detail
+(relativeOrigin 90 618)
+(bg "Light Blue Gray")
+(fg "Black")
+(PID 1)
+(title off)
+(tabStop off)
+(tabIndex 2)
+(borderStyle concave)
+(extent 396 17)
+(scFont "Arial" 12))
+(widget 10 detail
+(relativeOrigin 0 345)
+(bg "Dark Yellow")
+(PID 2)
+(title off)
+(tabIndex 0)
+(borderStyle convex)
+(extent 776 51)
+(editing enabled))
+(panelBg "Light Blue Gray"))
+(detail
+(extent 856 657)
+(anchorPt 50 647)
+(configuration
+(devCarrierFor 30
+(active icon)
+(icon
+(extent 74 52)
+(iconImage "loop.icn"))
+(open
+(extent 12 30))
+(terminals on)
+(pinCenter 100 50))
+(devCarrierFor 109
+(active icon)
+(icon
+(extent 52 17))
+(terminals on)
+(pinCenter 100 -90))
+(devCarrierFor 111
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 -260))
+(devCarrierFor 162
+(active open)
+(icon
+(extent 585 0))
+(open
+(extent 625 45)
+(just l))
+(title off)
+(pinCenter 330 -330))
+(devCarrierFor 208
+(active icon)
+(icon
+(extent 108 16))
+(open
+(extent 81 53))
+(terminals on)
+(pinCenter 100 -10))
+(devCarrierFor 209
+(active icon)
+(icon
+(extent 62 16))
+(open
+(extent 131 28))
+(pinCenter 200 -10))
+(devCarrierFor 210
+(active open)
+(icon
+(extent 62 0))
+(open
+(extent 74 19)
+(just l))
+(title off)
+(pinCenter 290 -10))
+(devCarrierFor 215
+(active icon)
+(icon
+(extent 107 15))
+(open
+(extent 410 300)
+(carbonCopy))
+(terminals on)
+(pinCenter 350 90))
+(devCarrierFor 217
+(active icon)
+(icon
+(extent 110 15))
+(open
+(extent 265 50))
+(terminals on)
+(pinCenter 100 -200))
+(devCarrierFor 218
+(active icon)
+(icon
+(extent 145 15))
+(open
+(extent 225 50))
+(terminals on)
+(pinCenter 100 -160))
+(devCarrierFor 221
+(active open)
+(icon
+(iconImage "notepad.icn"))
+(open
+(extent 484 86)
+(editing enabled))
+(pinCenter 590 -190))
+(connect D4:0 D0:0
+(points 2 100 0 100 21))
+(connect D9:0 D1:0
+(points 2 100 -150 100 -101))
+(connect D1:0 D4:0
+(points 2 100 -79 100 -21))
+(connect D4:1 D5:1
+(points 2 156 -10 166 -10))
+(connect D5:0 D6:0
+(points 6 200 0 200 20 240 20 240 -40 290 -40 290 -22))
+(connect D0:1 D7:0
+(points 3 139 50 350 50 350 80))
+(connect D2:0 D8:0
+(points 2 100 -247 100 -210))
+(connect D8:0 D9:0
+(points 2 100 -190 100 -170)))
+(stackingOrder 4 6 5 2 3 10 0 9 8 7 1))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
